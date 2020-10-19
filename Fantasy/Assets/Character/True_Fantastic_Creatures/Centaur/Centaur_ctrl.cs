@@ -67,17 +67,17 @@ public class Centaur_ctrl : MonoBehaviour {
 		}
 
 			
-		if (Input.GetKey ("up")) 
+		if (Input.GetKey ("w")) 
 		{
 			anim.SetInteger ("moving", 1);//walk/run/moving
 		}
 		else 
-			{
-				anim.SetInteger ("moving", 0);
-			}
+		{
+			anim.SetInteger ("moving", 0);
+		}
 
 
-		if (Input.GetKey ("down")) //walkback
+		if (Input.GetKey ("s")) //walkback
 		{
 			anim.SetInteger ("moving", 12);
 			runSpeed = 1;
