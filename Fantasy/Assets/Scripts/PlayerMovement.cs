@@ -52,6 +52,38 @@ public class PlayerMovement : MonoBehaviour
 		}
 
 
+		//------------------------------------------------------------------ ARM
+
+		if (Input.GetKeyUp("1")) // Disarm
+		{
+			if (armed)
+			{
+				anim.SetBool("armed", true);
+			}
+			if (!armed)
+			{
+				anim.SetBool("armed", false);
+				runSpeed = 1;
+			}
+			armed = !armed;
+		}
+
+
+		if (Input.GetKeyUp("2")) // Disarm
+		{
+			if (armed)
+			{
+				anim.SetBool("arco", true);
+			}
+			if (!armed)
+			{
+				anim.SetBool("arco", false);
+				runSpeed = 1;
+			}
+			armed = !armed;
+		}
+
+
 		//-------------------------------------------------------------------TURNS
 
 		var vert_modul = Mathf.Abs(Input.GetAxis("Vertical"));
