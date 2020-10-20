@@ -84,6 +84,18 @@ public class PlayerMovement : MonoBehaviour
 		}
 
 
+		//--------------------------------------------------------------------ATTACK
+
+		if (Input.GetMouseButtonDown(0))
+		{ // attack1
+			anim.SetInteger("attack", 1);
+		}
+		else
+        {
+			anim.SetInteger("attack", 0);
+        }
+
+
 		//-------------------------------------------------------------------TURNS
 
 		var vert_modul = Mathf.Abs(Input.GetAxis("Vertical"));
