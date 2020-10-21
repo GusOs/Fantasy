@@ -1293,6 +1293,7 @@ MonoBehaviour:
   runSpeed: 3
   turnSpeed: 60
   gravity: 20
+  lifePlayer: 100
 --- !u!1001 &1583738072
 PrefabInstance:
   m_ObjectHideFlags: 0

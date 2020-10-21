@@ -7,7 +7,6 @@ public class PlayerMovement : MonoBehaviour
 
 	private Animator anim;
 	private CharacterController controller;
-	private int battle_state = 0;
 	public float speed = 6.0f;
 	public float runSpeed = 3.0f;
 	public float turnSpeed = 60.0f;
@@ -16,6 +15,7 @@ public class PlayerMovement : MonoBehaviour
 	private float w_sp = 0.0f;
 	private float r_sp = 0.0f;
 	private bool armed = true;
+	public float lifePlayer = 100f;
 
 	// Start is called before the first frame update
 	void Start()
@@ -24,7 +24,6 @@ public class PlayerMovement : MonoBehaviour
 		controller = GetComponent<CharacterController>();
 		w_sp = speed; //read walk speed
 		r_sp = runSpeed; //read run speed
-		battle_state = 0;
 		runSpeed = 1;
 	}
 
@@ -36,16 +35,19 @@ public class PlayerMovement : MonoBehaviour
 
     public void checkAnimation()
     {
+
+		//------------------------------------------------------------------ MOVE
+
 		if (Input.GetKey("w"))
 		{
-			anim.SetInteger("moving", 1);//walk/run/moving
+			anim.SetInteger("moving", 1);
 		}
 		else
 		{
 			anim.SetInteger("moving", 0);
 		}
 
-		if (Input.GetKey("s")) //walkback
+		if (Input.GetKey("s"))
 		{
 			anim.SetInteger("moving", 12);
 			runSpeed = 1;
@@ -54,7 +56,7 @@ public class PlayerMovement : MonoBehaviour
 
 		//------------------------------------------------------------------ ARM
 
-		if (Input.GetKeyUp("1")) // Disarm
+		if (Input.GetKeyUp("1"))
 		{
 			if (armed)
 			{
@@ -69,7 +71,7 @@ public class PlayerMovement : MonoBehaviour
 		}
 
 
-		if (Input.GetKeyUp("2")) // Disarm
+		if (Input.GetKeyUp("2"))
 		{
 			if (armed)
 			{
@@ -96,6 +98,14 @@ public class PlayerMovement : MonoBehaviour
         }
 
 
+		//-------------------------------------------------------------------DEATH
+
+		if(lifePlayer == 0)
+        {
+			anim.SetBool("death", true);
+        }
+
+
 		//-------------------------------------------------------------------TURNS
 
 		var vert_modul = Mathf.Abs(Input.GetAxis("Vertical"));
@@ -109,7 +119,6 @@ public class PlayerMovement : MonoBehaviour
 		else if (vert_modul > 0.3f)
 		{
 			anim.SetBool("turn_right", false);
-			//anim.SetLayerWeight(1,0f);
 		}
 
 		if ((Input.GetAxis("Horizontal") < -0.1f) && (vert_modul > 0.3f))
@@ -120,14 +129,15 @@ public class PlayerMovement : MonoBehaviour
 		else if (vert_modul > 0.3f)
 		{
 			anim.SetBool("turn_left", false);
-			//anim.SetLayerWeight(1,0f);
 		}
 
+
+		//--------------------------------------------------------------- MOVE SCENE
 
 		if (controller.isGrounded)
 		{
 			moveDirection = transform.forward * Input.GetAxis("Vertical") * speed * runSpeed;
-			//if (Mathf.Abs(Input.GetAxis ("Vertical")) > 0.2f)
+
 			if (vert_modul > 0.2f)
 			{
 				float turn = Input.GetAxis("Horizontal");
