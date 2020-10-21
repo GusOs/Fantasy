@@ -41,6 +41,7 @@ public class PlayerMovement : MonoBehaviour
 		if (Input.GetKey("w"))
 		{
 			anim.SetInteger("moving", 1);
+			runSpeed = 1;
 		}
 		else
 		{
@@ -52,6 +53,12 @@ public class PlayerMovement : MonoBehaviour
 			anim.SetInteger("moving", 12);
 			runSpeed = 1;
 		}
+
+		if(Input.GetKey("space"))
+        {
+			anim.SetInteger("moving", 3);
+			runSpeed = 3;
+        }
 
 
 		//------------------------------------------------------------------ ARM
