@@ -1290,7 +1290,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 3
-  runSpeed: 3
+  runSpeed: 6
   turnSpeed: 60
   gravity: 20
   lifePlayer: 100
