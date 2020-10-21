@@ -54,7 +54,7 @@ public class PlayerMovement : MonoBehaviour
 			runSpeed = 1;
 		}
 
-		if(Input.GetKey("space"))
+		if(Input.GetKey(KeyCode.LeftShift))
         {
 			anim.SetInteger("moving", 3);
 			runSpeed = 3;
