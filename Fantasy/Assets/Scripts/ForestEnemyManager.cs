@@ -36,11 +36,9 @@ public class ForestEnemyManager : MonoBehaviour
 
             this.transform.rotation = Quaternion.Slerp(this.transform.rotation, Quaternion.LookRotation(direction), 0.1f);
 
-            anim.SetBool("idle", true);
-
             if (direction.magnitude < 12)
             {
-                anim.SetBool("idle", false);
+                anim.SetBool("Idle", false);
                 anim.SetBool("attack", false);
                 anim.SetInteger("moving", 3);
                 nav = GetComponent<NavMeshAgent>();
