@@ -44,21 +44,21 @@ public class PlayerMovement : MonoBehaviour
 			runSpeed = 1;
 		}
 		else
-		{
+        {
 			anim.SetInteger("moving", 0);
-		}
+        }
 
 		if (Input.GetKey("s"))
 		{
 			anim.SetInteger("moving", 12);
-			runSpeed = 1;
 		}
 
-		if(Input.GetKey(KeyCode.LeftShift))
+		if(Input.GetKey(KeyCode.LeftShift) && Input.GetKey("w"))
         {
 			anim.SetInteger("moving", 3);
 			runSpeed = 3;
         }
+
 
 
 		//------------------------------------------------------------------ ARM
