@@ -11,6 +11,15 @@ public class RhinoManager : MonoBehaviour
     //Distancia de detección
     public float distance = 25f;
 
+    //Daño del ataque
+    public float attackRhino = 5.0f;
+
+    //Daño del ataque al embestir
+    public float attackRun = 8.0f;
+
+    //Vida del enemigo
+    public float lifeRhino = 20.0f;
+
     //Animator del enemigo
     public Animator anim;
 

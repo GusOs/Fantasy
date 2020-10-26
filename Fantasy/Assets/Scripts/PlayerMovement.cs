@@ -17,6 +17,8 @@ public class PlayerMovement : MonoBehaviour
 	private bool armed = true;
 	public float lifePlayer = 100f;
 
+	public float attackForce = 5.0f;
+
 	// Start is called before the first frame update
 	void Start()
     {
@@ -63,7 +65,7 @@ public class PlayerMovement : MonoBehaviour
 
 		//------------------------------------------------------------------ ARM
 
-		if (Input.GetKeyUp("1"))
+			if (Input.GetKeyUp("1"))
 		{
 			if (armed)
 			{

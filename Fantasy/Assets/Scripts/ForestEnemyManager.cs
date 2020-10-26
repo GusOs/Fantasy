@@ -14,6 +14,12 @@ public class ForestEnemyManager : MonoBehaviour
     //Animator del enemigo
     public Animator anim;
 
+    //Daño de ataque
+    public float attackForest = 5.0f;
+
+    //Vida del enemigo
+    public float lifeForest = 20.0f;
+
     UnityEngine.AI.NavMeshAgent nav;
 
     // Start is called before the first frame update

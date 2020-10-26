@@ -14,6 +14,10 @@ public class CentaurManager : MonoBehaviour
     //Animator del enemigo
     public Animator anim;
 
+    public float LifeBoss = 35.0f;
+
+    public float attackCentaur = 8.0f;
+
     UnityEngine.AI.NavMeshAgent nav;
 
     // Start is called before the first frame update
