@@ -66,18 +66,18 @@ public class PlayerMovement : MonoBehaviour
 		//------------------------------------------------------------------ ARM
 
 			if (Input.GetKeyUp("1"))
-		{
-			if (armed)
 			{
-				anim.SetBool("armed", true);
+				if (armed)
+				{
+					anim.SetBool("armed", true);
+				}
+				if (!armed)
+				{
+					anim.SetBool("armed", false);
+					runSpeed = 1;
+				}
+				armed = !armed;
 			}
-			if (!armed)
-			{
-				anim.SetBool("armed", false);
-				runSpeed = 1;
-			}
-			armed = !armed;
-		}
 
 
 		if (Input.GetKeyUp("2"))

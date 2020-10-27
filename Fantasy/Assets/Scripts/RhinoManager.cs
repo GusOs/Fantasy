@@ -47,13 +47,13 @@ public class RhinoManager : MonoBehaviour
 
             anim.SetBool("eat", true);
 
-            if(direction.magnitude < 12)
+            if(direction.magnitude < 15)
             {
                 anim.SetBool("eat", false);
                 anim.SetBool("shout", true);
             }
 
-            if (direction.magnitude < 8)
+            if (direction.magnitude < 12)
             {
                 anim.SetBool("attack", false);
                 anim.SetBool("eat", false);
@@ -61,7 +61,8 @@ public class RhinoManager : MonoBehaviour
                 nav = GetComponent<NavMeshAgent>();
                 nav.SetDestination(player.position);
             }
-            if(direction.magnitude < 2)
+
+            if(direction.magnitude < 6)
             {
                 anim.SetInteger("moving", 0);
                 anim.SetBool("attack", true);
