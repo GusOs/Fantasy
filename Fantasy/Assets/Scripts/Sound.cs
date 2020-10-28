@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-[CreateAssetMenu(menuName = "Amnesia Legacy/Sound", fileName = "Sound.asset")]
+[CreateAssetMenu(menuName = "Fantasy/Sound", fileName = "Sound.asset")]
 public class Sound : ScriptableObject
 {
     [System.Serializable]
