@@ -33,7 +33,9 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         checkAnimation();
-    }
+		checkDead();
+
+	}
 
     public void checkAnimation()
     {
@@ -156,4 +158,12 @@ public class PlayerMovement : MonoBehaviour
 		moveDirection.y -= gravity * Time.deltaTime;
 		controller.Move(moveDirection * Time.deltaTime);
 	}
+
+	public void checkDead()
+    {
+		if(lifePlayer == 0)
+        {
+			anim.SetBool("death", true);
+        }
+    }
 }
