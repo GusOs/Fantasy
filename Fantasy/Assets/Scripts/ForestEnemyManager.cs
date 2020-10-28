@@ -35,6 +35,12 @@ public class ForestEnemyManager : MonoBehaviour
     */
     void Update()
     {
+        checkAnimation();
+        checkDead();
+    }
+
+    public void checkAnimation()
+    {
         if (Vector3.Distance(player.position, this.transform.position) < distance)
         {
             Vector3 direction = player.position - this.transform.position;
@@ -55,6 +61,14 @@ public class ForestEnemyManager : MonoBehaviour
                 anim.SetInteger("moving", 0);
                 anim.SetBool("attack", true);
             }
+        }
+    }
+
+    public void checkDead()
+    {
+        if(lifeForest == 0)
+        {
+            anim.SetBool("death", true);
         }
     }
 }

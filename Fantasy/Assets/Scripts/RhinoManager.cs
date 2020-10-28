@@ -38,6 +38,12 @@ public class RhinoManager : MonoBehaviour
     */
     void Update()
     {
+        checkAnimation();
+        checkDead();
+    }
+
+    public void checkAnimation()
+    {
         if (Vector3.Distance(player.position, this.transform.position) < distance)
         {
             Vector3 direction = player.position - this.transform.position;
@@ -47,7 +53,7 @@ public class RhinoManager : MonoBehaviour
 
             anim.SetBool("eat", true);
 
-            if(direction.magnitude < 15)
+            if (direction.magnitude < 15)
             {
                 anim.SetBool("eat", false);
                 anim.SetBool("shout", true);
@@ -62,11 +68,19 @@ public class RhinoManager : MonoBehaviour
                 nav.SetDestination(player.position);
             }
 
-            if(direction.magnitude < 6)
+            if (direction.magnitude < 6)
             {
                 anim.SetInteger("moving", 0);
                 anim.SetBool("attack", true);
             }
+        }
+    }
+
+    public void checkDead()
+    {
+        if (lifeRhino == 0)
+        {
+            anim.SetBool("death", true);
         }
     }
 }
