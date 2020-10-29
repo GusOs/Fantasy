@@ -1899,6 +1899,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Forest Enemy
       objectReference: {fileID: 0}
+    - target: {fileID: 1062038605359136457, guid: e8099aa22f3f7be4e8a5b28abd942474,
+        type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
     - target: {fileID: 1062515787042096877, guid: e8099aa22f3f7be4e8a5b28abd942474,
         type: 3}
       propertyPath: player
@@ -2115,6 +2120,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Rhino
+      objectReference: {fileID: 0}
+    - target: {fileID: 9021066423261588178, guid: c4cac795f72b20241b3dd51f2456930b,
+        type: 3}
+      propertyPath: m_TagString
+      value: Enemy
       objectReference: {fileID: 0}
     - target: {fileID: 9021066423261708044, guid: c4cac795f72b20241b3dd51f2456930b,
         type: 3}
