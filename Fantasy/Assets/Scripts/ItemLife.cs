@@ -7,9 +7,6 @@ public class ItemLife : MonoBehaviour
     //Colision
     private Collider itemCollision;
 
-    //Efecto al colisionar
-    public GameObject lifeEffect;
-
     //Audio al colisionar
     public Sound life;
 
@@ -33,13 +30,13 @@ public class ItemLife : MonoBehaviour
     */
     private void OnTriggerEnter(Collider itemCollision)
     {
-        if (itemCollision.CompareTag("Player") && playerScript.lifePlayer < 100)
+        if (itemCollision.CompareTag("Player"))
         {
-            //AudioManager.Instance.PlaySound(life);
-            (itemCollision.gameObject.GetComponent("PlayerMovement") as PlayerMovement).lifePlayer += 20;
-            //Debug.Log((itemCollision.gameObject.GetComponent("PlayerMovement") as PlayerMovement).lifePlayer);
-            //Instantiate(lifeEffect, this.transform.position, Quaternion.LookRotation(this.transform.position));
-            this.gameObject.SetActive(false);
+             AudioManager.Instance.PlaySound(life);
+             (itemCollision.gameObject.GetComponent("PlayerMovement") as PlayerMovement).lifePlayer += 20;
+             //Debug.Log((itemCollision.gameObject.GetComponent("PlayerMovement") as PlayerMovement).lifePlayer);
+             //Instantiate(lifeEffect, this.transform.position, Quaternion.LookRotation(this.transform.position));
+             this.gameObject.SetActive(false);
         }
     }
 }

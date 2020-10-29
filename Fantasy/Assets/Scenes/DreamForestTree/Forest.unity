@@ -1097,7 +1097,7 @@ Transform:
   - {fileID: 1737556824}
   - {fileID: 497832452}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &998061250
 GameObject:
@@ -1983,6 +1983,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 4277945452964616430, guid: 6fb81720ab4f4bf49b955a963167f251,
+        type: 3}
+      propertyPath: lifePlayer
+      value: 80
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6fb81720ab4f4bf49b955a963167f251, type: 3}
 --- !u!1001 &6371192576827173329
@@ -2035,7 +2040,7 @@ PrefabInstance:
     - target: {fileID: 6371192577488280031, guid: 15037398055378d4fa3675c7da5572d5,
         type: 3}
       propertyPath: m_RootOrder
-      value: 10
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 6371192577488280031, guid: 15037398055378d4fa3675c7da5572d5,
         type: 3}
