@@ -66,9 +66,13 @@ public class ForestEnemyManager : MonoBehaviour
 
     public void checkDead()
     {
-        if(lifeForest == 0)
+        float timeDestroy = 5f;
+
+        if (lifeForest == 0)
         {
+            //Instantiate(lifeItem, this.transform.position, Quaternion.LookRotation(this.transform.position));
             anim.SetBool("death", true);
+            Destroy(this.gameObject, timeDestroy);
         }
     }
 }

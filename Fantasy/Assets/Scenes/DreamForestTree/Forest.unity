@@ -1221,8 +1221,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.1267982, y: 1.7192425, z: 2.709724}
-  m_Center: {x: -0.06339892, y: 0.81200683, z: 0.36556658}
+  m_Size: {x: 1.1267982, y: 1.7192425, z: 2.717331}
+  m_Center: {x: -0.06339892, y: 0.81200683, z: 0.369367}
 --- !u!1001 &1112658663
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1909,6 +1909,11 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 4087326587522008}
+    - target: {fileID: 1062515787042096877, guid: e8099aa22f3f7be4e8a5b28abd942474,
+        type: 3}
+      propertyPath: lifeForest
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e8099aa22f3f7be4e8a5b28abd942474, type: 3}
 --- !u!1001 &4277945451810395724
@@ -1941,7 +1946,7 @@ PrefabInstance:
     - target: {fileID: 4274151204138556820, guid: 6fb81720ab4f4bf49b955a963167f251,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 4274151204138556820, guid: 6fb81720ab4f4bf49b955a963167f251,
         type: 3}
@@ -1951,7 +1956,7 @@ PrefabInstance:
     - target: {fileID: 4274151204138556820, guid: 6fb81720ab4f4bf49b955a963167f251,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 4274151204138556820, guid: 6fb81720ab4f4bf49b955a963167f251,
         type: 3}
@@ -1966,7 +1971,7 @@ PrefabInstance:
     - target: {fileID: 4274151204138556820, guid: 6fb81720ab4f4bf49b955a963167f251,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 4274151204138556820, guid: 6fb81720ab4f4bf49b955a963167f251,
         type: 3}
@@ -2136,5 +2141,22 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 4087326587522008}
+    - target: {fileID: 9021066423261708044, guid: c4cac795f72b20241b3dd51f2456930b,
+        type: 3}
+      propertyPath: shoud
+      value: 
+      objectReference: {fileID: 11400000, guid: cf9c49ab65b967b41a6b7fb38697211a,
+        type: 2}
+    - target: {fileID: 9021066423261708044, guid: c4cac795f72b20241b3dd51f2456930b,
+        type: 3}
+      propertyPath: lifeItem
+      value: 
+      objectReference: {fileID: 1000012970591572, guid: 7cafb89b5a0f61f479d0a748962abbbc,
+        type: 3}
+    - target: {fileID: 9021066423261708044, guid: c4cac795f72b20241b3dd51f2456930b,
+        type: 3}
+      propertyPath: lifeRhino
+      value: 20
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c4cac795f72b20241b3dd51f2456930b, type: 3}

@@ -23,6 +23,8 @@ public class RhinoManager : MonoBehaviour
     //Animator del enemigo
     public Animator anim;
 
+    public GameObject lifeItem;
+
     UnityEngine.AI.NavMeshAgent nav;
 
     // Start is called before the first frame update
@@ -78,9 +80,13 @@ public class RhinoManager : MonoBehaviour
 
     public void checkDead()
     {
+        float timeDestroy = 3f;
+
         if (lifeRhino == 0)
         {
+            //Instantiate(lifeItem, this.transform.position, Quaternion.LookRotation(this.transform.position));
             anim.SetBool("death", true);
+            Destroy(this.gameObject, timeDestroy);       
         }
     }
 }
