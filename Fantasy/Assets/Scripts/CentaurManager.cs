@@ -14,7 +14,7 @@ public class CentaurManager : MonoBehaviour
     //Animator del enemigo
     public Animator anim;
 
-    public float LifeBoss = 35.0f;
+    public float lifeBoss = 35.0f;
 
     public float attackCentaur = 8.0f;
 
@@ -28,6 +28,12 @@ public class CentaurManager : MonoBehaviour
 
     // Update is called once per frame
     void Update()
+    {
+        checkAnimation();
+        checkDead();
+    }
+
+    public void checkAnimation()
     {
         if (Vector3.Distance(player.position, this.transform.position) < distance)
         {
@@ -54,6 +60,18 @@ public class CentaurManager : MonoBehaviour
                 anim.SetInteger("moving", 0);
                 anim.SetBool("attack", true);
             }
+        }
+    }
+
+    public void checkDead()
+    {
+        float timeDestroy = 1.6f;
+
+        if (lifeBoss == 0)
+        {
+            //Instantiate(lifeItem, this.transform.position, Quaternion.LookRotation(this.transform.position));
+            anim.SetBool("death", true);
+            Destroy(this.gameObject, timeDestroy);
         }
     }
 }
