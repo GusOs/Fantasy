@@ -1740,7 +1740,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb7af0e00c7121940a8df009625f9e45, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mirror: {fileID: 11400000, guid: 2813429d96170784da5ff039c04b37b3, type: 2}
+  mirror: {fileID: 0}
 --- !u!1 &2096236730 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 9021066423261549522, guid: c4cac795f72b20241b3dd51f2456930b,
@@ -2157,7 +2157,7 @@ PrefabInstance:
     - target: {fileID: 9021066423261708044, guid: c4cac795f72b20241b3dd51f2456930b,
         type: 3}
       propertyPath: lifeRhino
-      value: 0
+      value: 20
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c4cac795f72b20241b3dd51f2456930b, type: 3}
