@@ -1912,7 +1912,7 @@ PrefabInstance:
     - target: {fileID: 1062515787042096877, guid: e8099aa22f3f7be4e8a5b28abd942474,
         type: 3}
       propertyPath: lifeForest
-      value: 0
+      value: 20
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e8099aa22f3f7be4e8a5b28abd942474, type: 3}
@@ -2156,7 +2156,7 @@ PrefabInstance:
     - target: {fileID: 9021066423261708044, guid: c4cac795f72b20241b3dd51f2456930b,
         type: 3}
       propertyPath: lifeRhino
-      value: 20
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c4cac795f72b20241b3dd51f2456930b, type: 3}
