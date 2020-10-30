@@ -6,6 +6,8 @@ using UnityEngine.SceneManagement;
 public class MirrorManager : MonoBehaviour
 {
 
+    public Sound mirror;
+
     private Collider playerCollision;
 
     // Start is called before the first frame update
@@ -24,6 +26,7 @@ public class MirrorManager : MonoBehaviour
     {
         if(playerCollision.CompareTag("Player"))
         {
+            AudioManager.Instance.PlaySound(mirror);
             SceneManager.LoadScene("Temple_Jungle");
         }
     }
