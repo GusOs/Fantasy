@@ -19,6 +19,12 @@ public class PlayerMovement : MonoBehaviour
 
 	public float attackForce = 5.0f;
 
+	public Sound death;
+
+	public Sound arm;
+
+	public Sound disarm;
+
 	// Start is called before the first frame update
 	void Start()
     {
@@ -67,19 +73,21 @@ public class PlayerMovement : MonoBehaviour
 
 		//------------------------------------------------------------------ ARM
 
-			if (Input.GetKeyUp("1"))
+		if (Input.GetKeyUp("1"))
+		{
+			if (armed)
 			{
-				if (armed)
-				{
-					anim.SetBool("armed", true);
-				}
-				if (!armed)
-				{
-					anim.SetBool("armed", false);
-					runSpeed = 1;
-				}
-				armed = !armed;
+				anim.SetBool("armed", true);
+				AudioManager.Instance.PlaySound(arm);
 			}
+			if (!armed)
+			{
+				anim.SetBool("armed", false);
+				AudioManager.Instance.PlaySound(disarm);
+				runSpeed = 1;
+			}
+			armed = !armed;
+		}
 
 
 		if (Input.GetKeyUp("2"))
@@ -164,6 +172,7 @@ public class PlayerMovement : MonoBehaviour
 		if(lifePlayer == 0)
         {
 			anim.SetBool("death", true);
-        }
+			AudioManager.Instance.PlaySound(death);
+		}
     }
 }

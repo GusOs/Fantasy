@@ -25,7 +25,7 @@ public class Sword : MonoBehaviour
     {
         if(enemyCollision.CompareTag("Enemy"))
         {
-            AudioManager.Instance.PlaySound(Hit);
+            
         }
     }
 
