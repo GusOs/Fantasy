@@ -90,21 +90,6 @@ public class PlayerMovement : MonoBehaviour
 		}
 
 
-		if (Input.GetKeyUp("2"))
-		{
-			if (armed)
-			{
-				anim.SetBool("arco", true);
-			}
-			if (!armed)
-			{
-				anim.SetBool("arco", false);
-				runSpeed = 1;
-			}
-			armed = !armed;
-		}
-
-
 		//--------------------------------------------------------------------ATTACK
 
 		if (Input.GetMouseButtonDown(0))

@@ -65,7 +65,6 @@ public class RhinoManager : MonoBehaviour
             {
                 anim.SetBool("attack", false);
                 anim.SetBool("eat", false);
-                anim.SetBool("idle", false);
                 anim.SetInteger("moving", 6);
                 nav = GetComponent<NavMeshAgent>();
                 nav.SetDestination(player.position);

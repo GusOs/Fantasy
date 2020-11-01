@@ -12330,6 +12330,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7344746736883332548, guid: a495ea7675a984547a5d912d21b2e296,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7344746736883332548, guid: a495ea7675a984547a5d912d21b2e296,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7344746736883332548, guid: a495ea7675a984547a5d912d21b2e296,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 7344746736883531518, guid: a495ea7675a984547a5d912d21b2e296,
         type: 3}
       propertyPath: m_Name
@@ -12343,7 +12358,7 @@ PrefabInstance:
     - target: {fileID: 7344746737877166852, guid: a495ea7675a984547a5d912d21b2e296,
         type: 3}
       propertyPath: lifeBoss
-      value: 0
+      value: 30
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a495ea7675a984547a5d912d21b2e296, type: 3}

@@ -50,7 +50,6 @@ public class ForestEnemyManager : MonoBehaviour
 
             if (direction.magnitude < 12)
             {
-                anim.SetBool("Idle", false);
                 anim.SetBool("attack", false);
                 anim.SetInteger("moving", 3);
                 nav = GetComponent<NavMeshAgent>();
