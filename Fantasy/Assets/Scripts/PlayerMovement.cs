@@ -38,12 +38,12 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        checkAnimation();
-		checkDead();
+        CheckAnimation();
+		CheckDead();
 
 	}
 
-    public void checkAnimation()
+    public void CheckAnimation()
     {
 
 		//------------------------------------------------------------------ MOVE
@@ -167,7 +167,7 @@ public class PlayerMovement : MonoBehaviour
 		controller.Move(moveDirection * Time.deltaTime);
 	}
 
-	public void checkDead()
+	public void CheckDead()
     {
 		if(lifePlayer == 0)
         {

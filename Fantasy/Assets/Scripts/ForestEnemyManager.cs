@@ -35,11 +35,11 @@ public class ForestEnemyManager : MonoBehaviour
     */
     void Update()
     {
-        checkAnimation();
-        checkDead();
+        CheckAnimation();
+        CheckDead();
     }
 
-    public void checkAnimation()
+    public void CheckAnimation()
     {
         if (Vector3.Distance(player.position, this.transform.position) < distance)
         {
@@ -64,7 +64,7 @@ public class ForestEnemyManager : MonoBehaviour
         }
     }
 
-    public void checkDead()
+    public void CheckDead()
     {
         float timeDestroy = 5f;
 

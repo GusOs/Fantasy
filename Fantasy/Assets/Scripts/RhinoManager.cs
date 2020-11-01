@@ -40,11 +40,11 @@ public class RhinoManager : MonoBehaviour
     */
     void Update()
     {
-        checkAnimation();
-        checkDead();
+        CheckAnimation();
+        CheckDead();
     }
 
-    public void checkAnimation()
+    public void CheckAnimation()
     {
         if (Vector3.Distance(player.position, this.transform.position) < distance)
         {
@@ -65,6 +65,7 @@ public class RhinoManager : MonoBehaviour
             {
                 anim.SetBool("attack", false);
                 anim.SetBool("eat", false);
+                anim.SetBool("idle", false);
                 anim.SetInteger("moving", 6);
                 nav = GetComponent<NavMeshAgent>();
                 nav.SetDestination(player.position);
@@ -78,7 +79,7 @@ public class RhinoManager : MonoBehaviour
         }
     }
 
-    public void checkDead()
+    public void CheckDead()
     {
         float timeDestroy = 3f;
 
