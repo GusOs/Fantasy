@@ -55,12 +55,6 @@ public class RhinoManager : MonoBehaviour
 
             anim.SetBool("eat", true);
 
-            if (direction.magnitude < 15)
-            {
-                anim.SetBool("eat", false);
-                anim.SetBool("shout", true);
-            }
-
             if (direction.magnitude < 12)
             {
                 anim.SetBool("attack", false);
