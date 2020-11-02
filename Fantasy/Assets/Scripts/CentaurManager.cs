@@ -42,15 +42,15 @@ public class CentaurManager : MonoBehaviour
 
             this.transform.rotation = Quaternion.Slerp(this.transform.rotation, Quaternion.LookRotation(direction), 0.1f);
 
-            anim.SetBool("dle_battle", true);
+            anim.SetInteger("moving", 0);
 
             if (direction.magnitude < 12)
             {
-                anim.SetBool("dle_battle", false);
                 anim.SetBool("attack", false);
-                anim.SetBool("trick", true);
-                anim.SetInteger("moving", 1);
+                anim.SetBool("trick", true);             
                 nav = GetComponent<NavMeshAgent>();
+                nav.isStopped = false;
+                anim.SetInteger("moving", 1);
                 nav.SetDestination(player.position);
             }
 
@@ -58,6 +58,8 @@ public class CentaurManager : MonoBehaviour
             {
                 anim.SetBool("trick", false);
                 anim.SetInteger("moving", 0);
+                nav = GetComponent<NavMeshAgent>();
+                nav.isStopped = true;
                 anim.SetBool("attack", true);
             }
         }
