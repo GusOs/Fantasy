@@ -53,19 +53,16 @@ public class RhinoManager : MonoBehaviour
 
             this.transform.rotation = Quaternion.Slerp(this.transform.rotation, Quaternion.LookRotation(direction), 0.1f);
 
-            anim.SetBool("eat", true);
-
-            if (direction.magnitude < 12)
+            if (direction.magnitude < 20)
             {
-                anim.SetBool("attack", false);
-                anim.SetBool("eat", false);             
+                anim.SetBool("attack", false);            
                 nav = GetComponent<NavMeshAgent>();
                 nav.isStopped = false;
                 anim.SetInteger("moving", 6);
                 nav.SetDestination(player.position);
             }
 
-            if (direction.magnitude < 6)
+            if (direction.magnitude < 5)
             {
                 anim.SetInteger("moving", 0);
                 nav = GetComponent<NavMeshAgent>();
