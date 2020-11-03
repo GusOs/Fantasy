@@ -1510,6 +1510,25 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 52a80cadc219314489b01f1b5a48639c, type: 3}
+--- !u!1 &1640467432 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4276549897098931598, guid: 6fb81720ab4f4bf49b955a963167f251,
+    type: 3}
+  m_PrefabInstance: {fileID: 4277945451810395724}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &1640467435
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1640467432}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.07347502, y: 0.8091991, z: 0.3630791}
+  m_Center: {x: -0.21683367, y: 0.91059685, z: -0.035327233}
 --- !u!1001 &1667119368
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2290,5 +2309,27 @@ PrefabInstance:
       propertyPath: clip2
       value: 
       objectReference: {fileID: 8300000, guid: 8cc749ec5b5de61438f1c7aef0d79e90, type: 3}
+    - target: {fileID: 9021066423261708044, guid: c4cac795f72b20241b3dd51f2456930b,
+        type: 3}
+      propertyPath: hornHit
+      value: 
+      objectReference: {fileID: 11400000, guid: b9a0ec1f8f83699478bd27f681560177,
+        type: 2}
+    - target: {fileID: 9021066423261708044, guid: c4cac795f72b20241b3dd51f2456930b,
+        type: 3}
+      propertyPath: deathCreature
+      value: 
+      objectReference: {fileID: 11400000, guid: 33ec01c3eb8bbb24887ab4b8a66220b2,
+        type: 2}
+    - target: {fileID: 9021066423261708044, guid: c4cac795f72b20241b3dd51f2456930b,
+        type: 3}
+      propertyPath: audioSource
+      value: 
+      objectReference: {fileID: 1924546414}
+    - target: {fileID: 9021066423261708044, guid: c4cac795f72b20241b3dd51f2456930b,
+        type: 3}
+      propertyPath: clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 8d8372b34ae9ea644a6cd4d1e4a85164, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c4cac795f72b20241b3dd51f2456930b, type: 3}

@@ -17,8 +17,6 @@ public class PlayerMovement : MonoBehaviour
 	private bool armed = true;
 	public float lifePlayer = 100f;
 
-	public float attackForce = 5.0f;
-
 	public Sound death;
 
 	public Sound arm;

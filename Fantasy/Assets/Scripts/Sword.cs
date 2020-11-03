@@ -9,6 +9,8 @@ public class Sword : MonoBehaviour
 
     public Sound Hit;
 
+    public float attackForce = 5.0f;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -25,7 +27,7 @@ public class Sword : MonoBehaviour
     {
         if(enemyCollision.CompareTag("Enemy"))
         {
-            
+            //(enemyCollision.gameObject.GetComponent("PlayerMovement") as PlayerMovement).lifePlayer -= attackForce;
         }
     }
 

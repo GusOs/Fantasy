@@ -72,8 +72,9 @@ public class RhinoManager : MonoBehaviour
 
         if (lifeRhino == 0)
         {
-            //Instantiate(lifeItem, this.transform.position, Quaternion.LookRotation(this.transform.position));
             anim.SetBool("death", true);
+            //Instantiate(lifeItem, this.transform.position, Quaternion.LookRotation(this.transform.position));
+
             Destroy(this.gameObject, timeDestroy);       
         }
     }
