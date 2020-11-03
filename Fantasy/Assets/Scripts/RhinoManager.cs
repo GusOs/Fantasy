@@ -11,12 +11,6 @@ public class RhinoManager : MonoBehaviour
     //Distancia de detección
     public float distance = 25f;
 
-    //Daño del ataque
-    public float attackRhino = 5.0f;
-
-    //Daño del ataque al embestir
-    public float attackRun = 8.0f;
-
     //Vida del enemigo
     public float lifeRhino = 20.0f;
 
@@ -62,7 +56,7 @@ public class RhinoManager : MonoBehaviour
                 nav.SetDestination(player.position);
             }
 
-            if (direction.magnitude < 5)
+            if (direction.magnitude < 3)
             {
                 anim.SetInteger("moving", 0);
                 nav = GetComponent<NavMeshAgent>();
