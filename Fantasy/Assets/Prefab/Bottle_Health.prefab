@@ -4759,6 +4759,7 @@ GameObject:
   m_Component:
   - component: {fileID: 504034453104167674}
   - component: {fileID: 6057638272182991399}
+  - component: {fileID: -582210442923832608}
   m_Layer: 0
   m_Name: Bottle_Health
   m_TagString: Untagged
@@ -4795,8 +4796,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   life: {fileID: 11400000, guid: 07a341f03b420de438a35b318a1a1907, type: 2}
-  lifePlayer: {fileID: 4276221280190151884, guid: 6fb81720ab4f4bf49b955a963167f251,
+  lifePlayer: {fileID: 1442654229535914411, guid: 6fb81720ab4f4bf49b955a963167f251,
     type: 3}
+--- !u!65 &-582210442923832608
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 500753701376299314}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &500753701810751332
 GameObject:
   m_ObjectHideFlags: 0
