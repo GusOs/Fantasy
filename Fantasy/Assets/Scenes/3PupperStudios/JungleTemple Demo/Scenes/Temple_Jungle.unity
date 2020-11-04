@@ -11223,6 +11223,24 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 4277945452964616430, guid: 6fb81720ab4f4bf49b955a963167f251,
+        type: 3}
+      propertyPath: death
+      value: 
+      objectReference: {fileID: 11400000, guid: a43f1c545867cba478e47b11826f2c3a,
+        type: 2}
+    - target: {fileID: 4277945452964616430, guid: 6fb81720ab4f4bf49b955a963167f251,
+        type: 3}
+      propertyPath: arm
+      value: 
+      objectReference: {fileID: 11400000, guid: a6d16a52428c32c43b707272c2e839b1,
+        type: 2}
+    - target: {fileID: 4277945452964616430, guid: 6fb81720ab4f4bf49b955a963167f251,
+        type: 3}
+      propertyPath: disarm
+      value: 
+      objectReference: {fileID: 11400000, guid: 69192820921668f42898fc7f6c2aa478,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6fb81720ab4f4bf49b955a963167f251, type: 3}
 --- !u!1 &1568826508
@@ -12348,22 +12366,37 @@ PrefabInstance:
     - target: {fileID: 7344746736883332548, guid: a495ea7675a984547a5d912d21b2e296,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 4.5
+      value: 3.5
       objectReference: {fileID: 0}
     - target: {fileID: 7344746736883332548, guid: a495ea7675a984547a5d912d21b2e296,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 4.5
+      value: 3.5
       objectReference: {fileID: 0}
     - target: {fileID: 7344746736883332548, guid: a495ea7675a984547a5d912d21b2e296,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 4.5
+      value: 3.5
       objectReference: {fileID: 0}
     - target: {fileID: 7344746736883531518, guid: a495ea7675a984547a5d912d21b2e296,
         type: 3}
       propertyPath: m_Name
       value: Centaur
+      objectReference: {fileID: 0}
+    - target: {fileID: 7344746736897067754, guid: a495ea7675a984547a5d912d21b2e296,
+        type: 3}
+      propertyPath: m_AABB.m_Center.x
+      value: -0.13998759
+      objectReference: {fileID: 0}
+    - target: {fileID: 7344746736897067754, guid: a495ea7675a984547a5d912d21b2e296,
+        type: 3}
+      propertyPath: m_AABB.m_Center.y
+      value: 0.99524105
+      objectReference: {fileID: 0}
+    - target: {fileID: 7344746736897067754, guid: a495ea7675a984547a5d912d21b2e296,
+        type: 3}
+      propertyPath: m_AABB.m_Extent.y
+      value: 0.22992325
       objectReference: {fileID: 0}
     - target: {fileID: 7344746737877166852, guid: a495ea7675a984547a5d912d21b2e296,
         type: 3}
@@ -12377,6 +12410,25 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a495ea7675a984547a5d912d21b2e296, type: 3}
+--- !u!1 &1697022484 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7344746736883519210, guid: a495ea7675a984547a5d912d21b2e296,
+    type: 3}
+  m_PrefabInstance: {fileID: 1697022483}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1697022486
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1697022484}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0fe8db3f1836a164c98aac1907b1f24b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackBoss: 5
 --- !u!1001 &1710495242
 PrefabInstance:
   m_ObjectHideFlags: 0

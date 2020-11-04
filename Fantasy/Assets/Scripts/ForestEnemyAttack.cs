@@ -6,7 +6,7 @@ public class ForestEnemyAttack : MonoBehaviour
 {
     
     //Daño de ataque
-    public float attackForest = 5.0f;
+    public float attackForest = 3.0f;
 
     private Collider legsCollider;
 
@@ -24,7 +24,7 @@ public class ForestEnemyAttack : MonoBehaviour
 
     private void OnTriggerEnter(Collider legsCollider)
     {
-        if (legsCollider.CompareTag("Player"))
+        if (legsCollider.gameObject.CompareTag("Player"))
         {
             //Audio
             (legsCollider.gameObject.GetComponent("PlayerMovement") as PlayerMovement).lifePlayer -= attackForest;

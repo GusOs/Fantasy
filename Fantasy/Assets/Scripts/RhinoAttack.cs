@@ -6,7 +6,7 @@ public class RhinoAttack : MonoBehaviour
 {
 
     //Daño del ataque
-    public float attackRhino = 5.0f;
+    public float attackRhino = 2.0f;
 
     private Collider hornCollider;
 
@@ -24,7 +24,7 @@ public class RhinoAttack : MonoBehaviour
 
     private void OnTriggerEnter(Collider hornCollider)
     {
-        if (hornCollider.CompareTag("Player"))
+        if (hornCollider.gameObject.CompareTag("Player"))
         {
             //Audio hit
             (hornCollider.gameObject.GetComponent("PlayerMovement") as PlayerMovement).lifePlayer -= attackRhino;

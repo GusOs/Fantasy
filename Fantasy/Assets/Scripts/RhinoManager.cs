@@ -56,7 +56,7 @@ public class RhinoManager : MonoBehaviour
                 nav.SetDestination(player.position);
             }
 
-            if (direction.magnitude < 3)
+            if (direction.magnitude < 5)
             {
                 anim.SetInteger("moving", 0);
                 nav = GetComponent<NavMeshAgent>();
@@ -68,14 +68,12 @@ public class RhinoManager : MonoBehaviour
 
     public void CheckDead()
     {
-        float timeDestroy = 3f;
-
         if (lifeRhino == 0)
         {
             anim.SetBool("death", true);
-            //Instantiate(lifeItem, this.transform.position, Quaternion.LookRotation(this.transform.position));
-
-            Destroy(this.gameObject, timeDestroy);       
+            nav.isStopped = true;
+            Destroy(this.gameObject);
+            Instantiate(lifeItem, this.transform.position, Quaternion.LookRotation(this.transform.position));
         }
     }
 }

@@ -53,7 +53,7 @@ public class ForestEnemyManager : MonoBehaviour
                 anim.SetInteger("moving", 3);
                 nav.SetDestination(player.position);
             }
-            if (direction.magnitude < 4)
+            if (direction.magnitude < 4.5f)
             {
                 anim.SetInteger("moving", 0);
                 nav = GetComponent<NavMeshAgent>();

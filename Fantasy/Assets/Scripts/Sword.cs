@@ -25,9 +25,9 @@ public class Sword : MonoBehaviour
 
     private void OnTriggerEnter(Collider enemyCollision)
     {
-        if(enemyCollision.CompareTag("Enemy"))
+        if (enemyCollision.gameObject.CompareTag("Enemy"))
         {
-            //(enemyCollision.gameObject.GetComponent("PlayerMovement") as PlayerMovement).lifePlayer -= attackForce;
+            //(enemyCollision.gameObject.GetComponent("EnemyLife") as EnemyLife).lifeEnemy -= attackForce;
         }
     }
 
