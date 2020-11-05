@@ -70,7 +70,6 @@ public class ForestEnemyManager : MonoBehaviour
         if (lifeForest == 0)
         {
             anim.SetBool("death", true);
-            //nav = GetComponent<NavMeshAgent>();
             nav.isStopped = true;
             Destroy(this.gameObject);
             Instantiate(lifeItem, this.transform.position, Quaternion.LookRotation(this.transform.position));
