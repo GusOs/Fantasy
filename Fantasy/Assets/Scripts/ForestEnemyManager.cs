@@ -17,6 +17,8 @@ public class ForestEnemyManager : MonoBehaviour
     //Vida del enemigo
     public float lifeForest = 20.0f;
 
+    public GameObject lifeItem;
+
     UnityEngine.AI.NavMeshAgent nav;
 
     // Start is called before the first frame update
@@ -65,13 +67,13 @@ public class ForestEnemyManager : MonoBehaviour
 
     public void CheckDead()
     {
-        float timeDestroy = 5f;
-
         if (lifeForest == 0)
         {
-            //Instantiate(lifeItem, this.transform.position, Quaternion.LookRotation(this.transform.position));
             anim.SetBool("death", true);
-            Destroy(this.gameObject, timeDestroy);
+            //nav = GetComponent<NavMeshAgent>();
+            nav.isStopped = true;
+            Destroy(this.gameObject);
+            Instantiate(lifeItem, this.transform.position, Quaternion.LookRotation(this.transform.position));
         }
     }
 }

@@ -2016,8 +2016,14 @@ PrefabInstance:
     - target: {fileID: 1062515787042096877, guid: e8099aa22f3f7be4e8a5b28abd942474,
         type: 3}
       propertyPath: lifeForest
-      value: 20
+      value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1062515787042096877, guid: e8099aa22f3f7be4e8a5b28abd942474,
+        type: 3}
+      propertyPath: lifeItem
+      value: 
+      objectReference: {fileID: 500753701376299314, guid: 8ff845677d9663f47adf91d33c7dc4a5,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e8099aa22f3f7be4e8a5b28abd942474, type: 3}
 --- !u!1 &1062515787816115363 stripped
@@ -2228,7 +2234,7 @@ PrefabInstance:
     - target: {fileID: 9021066423261708044, guid: c4cac795f72b20241b3dd51f2456930b,
         type: 3}
       propertyPath: lifeRhino
-      value: 20
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9021066423261708044, guid: c4cac795f72b20241b3dd51f2456930b,
         type: 3}

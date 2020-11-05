@@ -35,7 +35,6 @@ public class ItemLife : MonoBehaviour
              AudioManager.Instance.PlaySound(life);
              (itemCollision.gameObject.GetComponent("PlayerMovement") as PlayerMovement).lifePlayer += 20;
              //Debug.Log((itemCollision.gameObject.GetComponent("PlayerMovement") as PlayerMovement).lifePlayer);
-             //Instantiate(lifeEffect, this.transform.position, Quaternion.LookRotation(this.transform.position));
              this.gameObject.SetActive(false);
         }
     }
