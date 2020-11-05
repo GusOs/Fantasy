@@ -539,10 +539,9 @@ PrefabInstance:
     - target: {fileID: 6249780552251505556, guid: 0a093fd8c8b47bf409773d41c08e37df,
         type: 3}
       propertyPath: m_Name
-      value: Cube (5)
+      value: water
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 6249780552251505554, guid: 0a093fd8c8b47bf409773d41c08e37df, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0a093fd8c8b47bf409773d41c08e37df, type: 3}
 --- !u!4 &428570016 stripped
 Transform:
