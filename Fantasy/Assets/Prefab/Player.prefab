@@ -5603,6 +5603,7 @@ GameObject:
   - component: {fileID: 1442654229535914404}
   - component: {fileID: 1442654229535914405}
   - component: {fileID: 1442654229535914410}
+  - component: {fileID: 1027355796}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -5718,6 +5719,22 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.66555786, y: 1.8520734, z: 0.397007}
   m_Center: {x: -0.0437088, y: 0.9531082, z: -0.004796982}
+--- !u!114 &1027355796
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1442654229535914411}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e98c0bcbce5e36e4da114a8be73b010b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioSource: {fileID: 0}
+  anim: {fileID: 1442654229535914406}
+  stepDelay: 0.7
+  defaultClip: {fileID: 8300000, guid: 30a23805d6424ed41890bc87184c7aeb, type: 3}
 --- !u!1 &1442654229546897916
 GameObject:
   m_ObjectHideFlags: 0
