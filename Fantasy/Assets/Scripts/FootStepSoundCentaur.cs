@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FootStep_Sounds : MonoBehaviour
+public class FootStepSoundCentaur : MonoBehaviour
 {
     public AudioSource audioSource;
     public Animator anim;
@@ -27,7 +27,7 @@ public class FootStep_Sounds : MonoBehaviour
         while (couroutineOn == true)
         {
 
-            if (anim.GetCurrentAnimatorStateInfo(0).IsName("Walk") || (anim.GetCurrentAnimatorStateInfo(0).IsName("Run")) || anim.GetCurrentAnimatorStateInfo(0).IsName("Walk_back"))
+            if (anim.GetCurrentAnimatorStateInfo(0).IsName("thc4_arma|st_run"))
             {
                 audioSource.Play();
             }

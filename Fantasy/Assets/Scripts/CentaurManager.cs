@@ -46,20 +46,20 @@ public class CentaurManager : MonoBehaviour
 
             if (direction.magnitude < 12)
             {
-                anim.SetBool("attack", false);
-                anim.SetBool("trick", true);             
                 nav = GetComponent<NavMeshAgent>();
                 nav.isStopped = false;
+                anim.SetBool("attack", false);
+                anim.SetBool("trick", true);             
                 anim.SetInteger("moving", 1);
                 nav.SetDestination(player.position);
             }
 
             if (direction.magnitude < 5)
             {
-                anim.SetBool("trick", false);
-                anim.SetInteger("moving", 0);
                 nav = GetComponent<NavMeshAgent>();
                 nav.isStopped = true;
+                anim.SetBool("trick", false);
+                anim.SetInteger("moving", 0);            
                 anim.SetBool("attack", true);
             }
         }
