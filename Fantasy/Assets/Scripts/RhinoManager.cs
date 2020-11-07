@@ -49,18 +49,18 @@ public class RhinoManager : MonoBehaviour
 
             if (direction.magnitude < 20)
             {
-                anim.SetBool("attack", false);            
                 nav = GetComponent<NavMeshAgent>();
                 nav.isStopped = false;
+                anim.SetBool("attack", false);            
                 anim.SetInteger("moving", 6);
                 nav.SetDestination(player.position);
             }
 
-            if (direction.magnitude < 5)
+            if (direction.magnitude < 4)
             {
-                anim.SetInteger("moving", 0);
                 nav = GetComponent<NavMeshAgent>();
                 nav.isStopped = true;
+                anim.SetInteger("moving", 0);
                 anim.SetBool("attack", true);
             }
         }
