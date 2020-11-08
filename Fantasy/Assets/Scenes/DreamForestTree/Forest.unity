@@ -335,9 +335,96 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 86678671}
+  - {fileID: 107729504}
   m_Father: {fileID: 0}
   m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &107729503
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 92548803}
+    m_Modifications:
+    - target: {fileID: 4750224125936889292, guid: d548dc44dab61594294f13aba2e5bd83,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 73.73248
+      objectReference: {fileID: 0}
+    - target: {fileID: 4750224125936889292, guid: d548dc44dab61594294f13aba2e5bd83,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -3.8957624
+      objectReference: {fileID: 0}
+    - target: {fileID: 4750224125936889292, guid: d548dc44dab61594294f13aba2e5bd83,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.57598114
+      objectReference: {fileID: 0}
+    - target: {fileID: 4750224125936889292, guid: d548dc44dab61594294f13aba2e5bd83,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4750224125936889292, guid: d548dc44dab61594294f13aba2e5bd83,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4750224125936889292, guid: d548dc44dab61594294f13aba2e5bd83,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4750224125936889292, guid: d548dc44dab61594294f13aba2e5bd83,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4750224125936889292, guid: d548dc44dab61594294f13aba2e5bd83,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4750224125936889292, guid: d548dc44dab61594294f13aba2e5bd83,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4750224125936889292, guid: d548dc44dab61594294f13aba2e5bd83,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4750224125936889292, guid: d548dc44dab61594294f13aba2e5bd83,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4750224125936889298, guid: d548dc44dab61594294f13aba2e5bd83,
+        type: 3}
+      propertyPath: m_Name
+      value: AttackSoundsForestEnemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 4750224125936889299, guid: d548dc44dab61594294f13aba2e5bd83,
+        type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 83c44fe62d564c74eb5cd62db072cb68, type: 3}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: d548dc44dab61594294f13aba2e5bd83, type: 3}
+--- !u!4 &107729504 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4750224125936889292, guid: d548dc44dab61594294f13aba2e5bd83,
+    type: 3}
+  m_PrefabInstance: {fileID: 107729503}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &107729505 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 4750224125936889299, guid: d548dc44dab61594294f13aba2e5bd83,
+    type: 3}
+  m_PrefabInstance: {fileID: 107729503}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &115225443 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 52a80cadc219314489b01f1b5a48639c,
@@ -2717,6 +2804,22 @@ Animator:
     type: 3}
   m_PrefabInstance: {fileID: 1062515787816115361}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1062515787816115369
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1062515787816115363}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1892804a52d1b3479e06706354e6259, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioSource: {fileID: 107729505}
+  anim: {fileID: 1062515787816115368}
+  stepDelay: 1.75
+  defaultClip: {fileID: 8300000, guid: 83c44fe62d564c74eb5cd62db072cb68, type: 3}
 --- !u!1001 &4750224124937146748
 PrefabInstance:
   m_ObjectHideFlags: 0
