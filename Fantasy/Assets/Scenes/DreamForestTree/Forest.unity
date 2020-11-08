@@ -619,6 +619,12 @@ AudioSource:
     type: 3}
   m_PrefabInstance: {fileID: 291203431}
   m_PrefabAsset: {fileID: 0}
+--- !u!82 &325029477 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 4750224125936889299, guid: d548dc44dab61594294f13aba2e5bd83,
+    type: 3}
+  m_PrefabInstance: {fileID: 1292429648}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &379598184
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1871,6 +1877,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: FootStepSoundRhino
       objectReference: {fileID: 0}
+    - target: {fileID: 4750224125936889299, guid: d548dc44dab61594294f13aba2e5bd83,
+        type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 04e49a876ec7da84fb25a759211d7fec, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d548dc44dab61594294f13aba2e5bd83, type: 3}
 --- !u!4 &1292429649 stripped
@@ -2394,11 +2405,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: FootStepSoundForestEnemy
       objectReference: {fileID: 0}
+    - target: {fileID: 4750224125936889299, guid: d548dc44dab61594294f13aba2e5bd83,
+        type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: a0ac66ac54ce89446979d697c630b41b, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d548dc44dab61594294f13aba2e5bd83, type: 3}
 --- !u!4 &2003978121 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4750224125936889292, guid: d548dc44dab61594294f13aba2e5bd83,
+    type: 3}
+  m_PrefabInstance: {fileID: 2003978120}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &2003978122 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 4750224125936889299, guid: d548dc44dab61594294f13aba2e5bd83,
     type: 3}
   m_PrefabInstance: {fileID: 2003978120}
   m_PrefabAsset: {fileID: 0}
@@ -2615,7 +2637,7 @@ PrefabInstance:
     - target: {fileID: 1062515787042096877, guid: e8099aa22f3f7be4e8a5b28abd942474,
         type: 3}
       propertyPath: lifeForest
-      value: 0
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 1062515787042096877, guid: e8099aa22f3f7be4e8a5b28abd942474,
         type: 3}
@@ -2673,6 +2695,22 @@ MonoBehaviour:
   anim: {fileID: 1062515787816115368}
   stepDelay: 0
   defaultClip: {fileID: 8300000, guid: 8d8372b34ae9ea644a6cd4d1e4a85164, type: 3}
+--- !u!114 &1062515787816115367
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1062515787816115363}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5662e0ea07d8a604c89413d38510251c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioSource: {fileID: 2003978122}
+  anim: {fileID: 1062515787816115368}
+  stepDelay: 0.4
+  defaultClip: {fileID: 8300000, guid: a0ac66ac54ce89446979d697c630b41b, type: 3}
 --- !u!95 &1062515787816115368 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 1147448125006616121, guid: e8099aa22f3f7be4e8a5b28abd942474,
@@ -2837,7 +2875,7 @@ PrefabInstance:
     - target: {fileID: 9021066423261320130, guid: c4cac795f72b20241b3dd51f2456930b,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 54.92
+      value: 55.02
       objectReference: {fileID: 0}
     - target: {fileID: 9021066423261320130, guid: c4cac795f72b20241b3dd51f2456930b,
         type: 3}
@@ -2924,7 +2962,7 @@ PrefabInstance:
     - target: {fileID: 9021066423261708044, guid: c4cac795f72b20241b3dd51f2456930b,
         type: 3}
       propertyPath: lifeRhino
-      value: 0
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 9021066423261708044, guid: c4cac795f72b20241b3dd51f2456930b,
         type: 3}
@@ -3033,3 +3071,32 @@ MonoBehaviour:
   anim: {fileID: 9021066422289914164}
   stepDelay: 0
   defaultClip: {fileID: 8300000, guid: 8d8372b34ae9ea644a6cd4d1e4a85164, type: 3}
+--- !u!114 &9021066422289914168
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9021066422289914163}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 267c1f1fb8b5dac4587ea9f0cddb2b2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioSource: {fileID: 325029477}
+  anim: {fileID: 9021066422289914164}
+  stepDelay: 0.7
+  defaultClip: {fileID: 8300000, guid: 04e49a876ec7da84fb25a759211d7fec, type: 3}
+--- !u!65 &9021066422289914169
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9021066422289914163}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
