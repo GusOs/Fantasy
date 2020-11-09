@@ -12617,6 +12617,38 @@ MonoBehaviour:
   anim: {fileID: 1697022487}
   stepDelay: 0
   defaultClip: {fileID: 8300000, guid: 8d8372b34ae9ea644a6cd4d1e4a85164, type: 3}
+--- !u!1 &1697022491 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7344746736883508380, guid: a495ea7675a984547a5d912d21b2e296,
+    type: 3}
+  m_PrefabInstance: {fileID: 1697022483}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &1697022492
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1697022491}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.084201455, y: 1.386988, z: 0.28740168}
+  m_Center: {x: -0.0024401154, y: -0.19349232, z: -0.027363047}
+--- !u!114 &1697022493
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1697022491}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0fe8db3f1836a164c98aac1907b1f24b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackBoss: 5
 --- !u!1001 &1710495242
 PrefabInstance:
   m_ObjectHideFlags: 0

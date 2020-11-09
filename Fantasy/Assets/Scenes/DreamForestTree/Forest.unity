@@ -2101,7 +2101,7 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1062515787816115361}
   m_PrefabAsset: {fileID: 0}
---- !u!65 &1472141942
+--- !u!65 &1472141943
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2475,7 +2475,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb7af0e00c7121940a8df009625f9e45, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mirror: {fileID: 0}
+  mirror: {fileID: 11400000, guid: 2813429d96170784da5ff039c04b37b3, type: 2}
 --- !u!1001 &2003978120
 PrefabInstance:
   m_ObjectHideFlags: 0
