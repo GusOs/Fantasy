@@ -26,10 +26,8 @@ public class ForestEnemyAttack : MonoBehaviour
     {
         if (legsCollider.gameObject.CompareTag("Player"))
         {
-            //Audio
             (legsCollider.gameObject.GetComponent("PlayerMovement") as PlayerMovement).lifePlayer -= attackForest;
-            // Check game state
-            // check game over
+            GameManager.Instance.GameOver();
         }
     }
 }

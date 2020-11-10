@@ -1,30 +1,25 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class WaterManager : MonoBehaviour
 {
 
-    private Collider water;
+    private Collider waterCollider;
 
     // Start is called before the first frame update
     void Start()
     {
-        water = GetComponent<Collider>();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        waterCollider = GetComponent<Collider>();
     }
 
 
-    private void OnTriggerEnter(Collider water)
+    private void OnTriggerEnter(Collider waterCollider)
     {
-        if (water.gameObject.CompareTag("Player"))
+        if (waterCollider.gameObject.CompareTag("Player"))
         {
-            //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
     }
 }

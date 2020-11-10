@@ -26,10 +26,8 @@ public class RhinoAttack : MonoBehaviour
     {
         if (hornCollider.gameObject.CompareTag("Player"))
         {
-            //Audio hit
             (hornCollider.gameObject.GetComponent("PlayerMovement") as PlayerMovement).lifePlayer -= attackRhino;
-            // Check game state
-            // check game over
+            GameManager.Instance.GameOver();
         }
     }
 }

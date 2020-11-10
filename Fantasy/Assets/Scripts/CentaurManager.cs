@@ -74,6 +74,7 @@ public class CentaurManager : MonoBehaviour
             //Instantiate(lifeItem, this.transform.position, Quaternion.LookRotation(this.transform.position));
             anim.SetBool("death", true);
             Destroy(this.gameObject, timeDestroy);
+            GameManager.Instance.WinGame();
         }
     }
 }

@@ -26,6 +26,7 @@ public class PlayerMovement : MonoBehaviour
 	// Start is called before the first frame update
 	void Start()
     {
+		//DontDestroyOnLoad(this);
 		anim = GetComponent<Animator>();
 		controller = GetComponent<CharacterController>();
 		w_sp = speed; //read walk speed
@@ -156,6 +157,7 @@ public class PlayerMovement : MonoBehaviour
         {
 			anim.SetBool("death", true);
 			AudioManager.Instance.PlaySound(death);
+			GameManager.Instance.GameOver();
 		}
     }
 }
