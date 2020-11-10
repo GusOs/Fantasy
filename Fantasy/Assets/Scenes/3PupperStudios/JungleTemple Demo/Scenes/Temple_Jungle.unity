@@ -8362,6 +8362,39 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1106886846}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1124296711 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1442654229272739547, guid: 6fb81720ab4f4bf49b955a963167f251,
+    type: 3}
+  m_PrefabInstance: {fileID: 1865036973}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &1124296713
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1124296711}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.6357792, y: 0.08725534, z: 0.115202345}
+  m_Center: {x: -0.32976243, y: 0.0012908246, z: -0.007269727}
+--- !u!114 &1124296714
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1124296711}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a91a29757040be343a1cc45f77dc63bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackSword: 5
+  Hit: {fileID: 11400000, guid: 4a105e9baa62e1e4e9a73ffb628fe7a3, type: 2}
 --- !u!1001 &1141564291
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12463,6 +12496,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Centaur
       objectReference: {fileID: 0}
+    - target: {fileID: 7344746736883531518, guid: a495ea7675a984547a5d912d21b2e296,
+        type: 3}
+      propertyPath: m_TagString
+      value: Boss
+      objectReference: {fileID: 0}
     - target: {fileID: 7344746736897067754, guid: a495ea7675a984547a5d912d21b2e296,
         type: 3}
       propertyPath: m_AABB.m_Center.x
@@ -12490,31 +12528,25 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a495ea7675a984547a5d912d21b2e296, type: 3}
---- !u!1 &1697022484 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7344746736883519210, guid: a495ea7675a984547a5d912d21b2e296,
-    type: 3}
-  m_PrefabInstance: {fileID: 1697022483}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1697022485 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7344746736883531518, guid: a495ea7675a984547a5d912d21b2e296,
     type: 3}
   m_PrefabInstance: {fileID: 1697022483}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1697022486
-MonoBehaviour:
+--- !u!65 &1697022486
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1697022484}
+  m_GameObject: {fileID: 1697022485}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0fe8db3f1836a164c98aac1907b1f24b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  attackBoss: 5
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1.6746203, z: 1.3553544}
+  m_Center: {x: 0, y: 0.84761584, z: -0.08210891}
 --- !u!95 &1697022487 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 7344746736892864248, guid: a495ea7675a984547a5d912d21b2e296,
@@ -13646,7 +13678,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1442654228414016454, guid: 6fb81720ab4f4bf49b955a963167f251, type: 3}
+    - {fileID: 1619502665, guid: 6fb81720ab4f4bf49b955a963167f251, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 6fb81720ab4f4bf49b955a963167f251, type: 3}
 --- !u!4 &1865036974 stripped
 Transform:
