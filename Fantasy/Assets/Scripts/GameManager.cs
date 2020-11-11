@@ -15,13 +15,16 @@ public class GameManager : MonoBehaviour
     private CentaurManager centaurScript;
 
     //Referencia al objeto de la vida del centauro
-    public GameObject lifeCentaur;
+    public GameObject lifeBoss;
 
     //Referencia al objeto de la vida del jugador
     public GameObject lifeplayer;
 
     //Variable para comprobar que el juego está activo
     public bool isGameActive;
+
+    //Objeto del panel wingame
+    public GameObject panelWinGame;
 
 
     private void Awake()
@@ -39,7 +42,7 @@ public class GameManager : MonoBehaviour
 
     public void GameOver()
     {
-        if(playerScript.lifePlayer <= 0)
+        if(playerScript.lifePlayer <= 0 && isGameActive)
         {
             isGameActive = false;
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
@@ -50,8 +53,14 @@ public class GameManager : MonoBehaviour
     {
         if(centaurScript.lifeBoss <= 0)
         {
-            //texto victoria
+            StartCoroutine(ShowGameOverPanelCoroutine());
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
+    }
+
+    public IEnumerator ShowGameOverPanelCoroutine()
+    {
+        yield return new WaitForSeconds(1.5f);
+        panelWinGame.SetActive(true);
     }
 }

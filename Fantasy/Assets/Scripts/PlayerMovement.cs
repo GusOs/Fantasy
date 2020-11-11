@@ -26,7 +26,6 @@ public class PlayerMovement : MonoBehaviour
 	// Start is called before the first frame update
 	void Start()
     {
-		//DontDestroyOnLoad(this);
 		anim = GetComponent<Animator>();
 		controller = GetComponent<CharacterController>();
 		w_sp = speed; //read walk speed

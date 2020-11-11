@@ -14,7 +14,7 @@ public class CentaurManager : MonoBehaviour
     //Animator del enemigo
     public Animator anim;
 
-    public float lifeBoss = 35.0f;
+    public float lifeBoss = 35;
 
     public float attackCentaur = 8.0f;
 
@@ -73,7 +73,7 @@ public class CentaurManager : MonoBehaviour
         {
             //Instantiate(lifeItem, this.transform.position, Quaternion.LookRotation(this.transform.position));
             anim.SetBool("death", true);
-            Destroy(this.gameObject, timeDestroy);
+            //Destroy(this.gameObject, timeDestroy);
             GameManager.Instance.WinGame();
         }
     }
