@@ -69,12 +69,11 @@ public class CentaurManager : MonoBehaviour
     {
         float timeDestroy = 1.6f;
 
-        if (lifeBoss == 0)
+        if (lifeBoss <= 0)
         {
-            //Instantiate(lifeItem, this.transform.position, Quaternion.LookRotation(this.transform.position));
             anim.SetBool("death", true);
-            //Destroy(this.gameObject, timeDestroy);
             GameManager.Instance.WinGame();
+            Destroy(this.gameObject, timeDestroy);
         }
     }
 }

@@ -17,7 +17,7 @@ public class MirrorManager : MonoBehaviour
     {
         if(playerCollision.CompareTag("Player"))
         {
-            DontDestroyOnLoad(player);
+            //DontDestroyOnLoad(player);
             AudioManager.Instance.PlaySound(mirror);
             SceneManager.LoadScene("Temple_Jungle");
         }

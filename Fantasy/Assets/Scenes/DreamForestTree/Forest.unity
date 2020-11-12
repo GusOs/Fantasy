@@ -2521,6 +2521,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mirror: {fileID: 11400000, guid: 2813429d96170784da5ff039c04b37b3, type: 2}
+  player: {fileID: 1027355794}
 --- !u!1001 &2003978120
 PrefabInstance:
   m_ObjectHideFlags: 0

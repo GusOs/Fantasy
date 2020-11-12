@@ -51,11 +51,9 @@ public class GameManager : MonoBehaviour
 
     public void WinGame()
     {
-        if(centaurScript.lifeBoss <= 0)
-        {
-            StartCoroutine(ShowGameOverPanelCoroutine());
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-        }
+         isGameActive = false;
+         StartCoroutine(ShowGameOverPanelCoroutine());
+         //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
     public IEnumerator ShowGameOverPanelCoroutine()
