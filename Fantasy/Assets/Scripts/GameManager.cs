@@ -51,9 +51,9 @@ public class GameManager : MonoBehaviour
 
     public void WinGame()
     {
-         isGameActive = false;
-         StartCoroutine(ShowGameOverPanelCoroutine());
-         //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        isGameActive = false;
+        StartCoroutine(ShowGameOverPanelCoroutine());
+        Cursor.lockState = CursorLockMode.Confined;
     }
 
     public IEnumerator ShowGameOverPanelCoroutine()
