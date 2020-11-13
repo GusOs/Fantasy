@@ -30,5 +30,13 @@ public class PlayerAttack : MonoBehaviour
             (swordCollider.gameObject.GetComponent("CentaurManager") as CentaurManager).lifeBoss -= attackSword;
             GameManager.Instance.GameOver();
         }
+        else if(swordCollider.gameObject.CompareTag("Enemy"))
+        {
+            (swordCollider.gameObject.GetComponent("ForestEnemyManager") as ForestEnemyManager).lifeForest -= attackSword;
+        }
+        else if(swordCollider.gameObject.CompareTag("Enemy1"))
+        {
+            (swordCollider.gameObject.GetComponent("RhinoManager") as RhinoManager).lifeRhino -= attackSword;
+        }
     }
 }
