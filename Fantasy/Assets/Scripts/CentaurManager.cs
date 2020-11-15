@@ -18,6 +18,8 @@ public class CentaurManager : MonoBehaviour
 
     public float attackCentaur = 8.0f;
 
+
+
     UnityEngine.AI.NavMeshAgent nav;
 
     // Start is called before the first frame update
@@ -44,21 +46,28 @@ public class CentaurManager : MonoBehaviour
 
             anim.SetInteger("moving", 0);
 
-            if (direction.magnitude < 12)
+            if (direction.magnitude < 50)
+            {
+                nav = GetComponent<NavMeshAgent>();
+                nav.isStopped = true;
+                anim.SetInteger("moving", 0);
+                anim.SetBool("magic", true);
+            }
+
+            /*if (direction.magnitude < 15)
             {
                 nav = GetComponent<NavMeshAgent>();
                 nav.isStopped = false;
                 anim.SetBool("attack", false);
-                anim.SetBool("trick", true);             
+                anim.SetBool("trick", true);
                 anim.SetInteger("moving", 1);
                 nav.SetDestination(player.position);
-            }
+            }*/
 
             if (direction.magnitude < 5)
             {
                 nav = GetComponent<NavMeshAgent>();
                 nav.isStopped = true;
-                anim.SetBool("trick", false);
                 anim.SetInteger("moving", 0);            
                 anim.SetBool("attack", true);
             }

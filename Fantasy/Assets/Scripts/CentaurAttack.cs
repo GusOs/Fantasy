@@ -25,10 +25,7 @@ public class CentaurAttack : MonoBehaviour
     {
         if (weaponCollider.gameObject.CompareTag("Player"))
         {
-            //Audio
             (weaponCollider.gameObject.GetComponent("PlayerMovement") as PlayerMovement).lifePlayer -= attackBoss;
-            // Check game state
-            // check game over
         }
     }
 }
