@@ -6,9 +6,11 @@ public class RhinoAttack : MonoBehaviour
 {
 
     //Daño del ataque
-    public float attackRhino = 2.0f;
+    public int attackRhino = 2;
 
     private Collider hornCollider;
+
+    public RhinoAttack Instance;
 
     // Start is called before the first frame update
     void Start()
@@ -26,7 +28,7 @@ public class RhinoAttack : MonoBehaviour
     {
         if (hornCollider.gameObject.CompareTag("Player"))
         {
-            (hornCollider.gameObject.GetComponent("PlayerMovement") as PlayerMovement).lifePlayer -= attackRhino;
+            (hornCollider.gameObject.GetComponent("PlayerLife") as PlayerLife).currentHealth -= attackRhino;
             GameManager.Instance.GameOver();
         }
     }

@@ -9,7 +9,7 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance;
 
     // Referencia al script del jugador
-    private PlayerMovement playerScript;
+    private PlayerLife playerScript;
 
     // Referencia al script del jefe final
     private CentaurManager centaurScript;
@@ -18,7 +18,7 @@ public class GameManager : MonoBehaviour
     public GameObject lifeBoss;
 
     //Referencia al objeto de la vida del jugador
-    public GameObject lifeplayer;
+    public GameObject currentHealth;
 
     //Variable para comprobar que el juego está activo
     public bool isGameActive;
@@ -36,13 +36,13 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        playerScript = lifeplayer.GetComponent<PlayerMovement>();
+        playerScript = currentHealth.GetComponent<PlayerLife>();
         Time.timeScale = 1;
     }
 
     public void GameOver()
     {
-        if(playerScript.lifePlayer <= 0 && isGameActive)
+        if(playerScript.currentHealth <= 0 && isGameActive)
         {
             isGameActive = false;
             SceneManager.LoadScene("Forest");

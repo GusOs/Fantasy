@@ -17,8 +17,6 @@ public class PlayerMovement : MonoBehaviour
 	private bool armed = true;
 	public float lifePlayer = 100f;
 
-	public Sound death;
-
 	public Sound arm;
 
 	public Sound disarm;
@@ -37,8 +35,6 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         CheckAnimation();
-		CheckDead();
-
 	}
 
     public void CheckAnimation()
@@ -149,14 +145,4 @@ public class PlayerMovement : MonoBehaviour
 		moveDirection.y -= gravity * Time.deltaTime;
 		controller.Move(moveDirection * Time.deltaTime);
 	}
-
-	public void CheckDead()
-    {
-		if(lifePlayer == 0)
-        {
-			anim.SetBool("death", true);
-			AudioManager.Instance.PlaySound(death);
-			GameManager.Instance.GameOver();
-		}
-    }
 }
