@@ -45,18 +45,18 @@ public class GameManager : MonoBehaviour
         if(playerScript.lifePlayer <= 0 && isGameActive)
         {
             isGameActive = false;
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            SceneManager.LoadScene("Forest");
         }
     }
 
     public void WinGame()
     {
         isGameActive = false;
-        StartCoroutine(ShowGameOverPanelCoroutine());
+        StartCoroutine(ShowGameWinPanelCoroutine());
         Cursor.lockState = CursorLockMode.Confined;
     }
 
-    public IEnumerator ShowGameOverPanelCoroutine()
+    public IEnumerator ShowGameWinPanelCoroutine()
     {
         yield return new WaitForSeconds(1.5f);
         panelWinGame.SetActive(true);
