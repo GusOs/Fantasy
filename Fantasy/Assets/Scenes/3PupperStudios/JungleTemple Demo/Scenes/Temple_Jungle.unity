@@ -6056,51 +6056,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 823777674}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &836148158
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 836148159}
-  - component: {fileID: 836148160}
-  m_Layer: 0
-  m_Name: SpawnMagic
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &836148159
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 836148158}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.0069, y: 0.4001, z: 0.012}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1697022484}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &836148160
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 836148158}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9b42d8388998f5847b9a90d1c4cee773, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spherePrefab: {fileID: 1700055842960204607, guid: 08bdac0d8e97f6d478cf31a8bdf32a1f,
-    type: 3}
 --- !u!1001 &858669199
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13059,12 +13014,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a495ea7675a984547a5d912d21b2e296, type: 3}
---- !u!4 &1697022484 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 7344746736883305348, guid: a495ea7675a984547a5d912d21b2e296,
-    type: 3}
-  m_PrefabInstance: {fileID: 1697022483}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1697022485 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7344746736883531518, guid: a495ea7675a984547a5d912d21b2e296,
@@ -13157,21 +13106,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.084201455, y: 1.386988, z: 0.28740168}
   m_Center: {x: -0.0024401154, y: -0.19349232, z: -0.027363047}
---- !u!114 &1697022493
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1697022491}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 48783323cb9363049834d517aa56d5f6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  magicAttack: 5
-  speedMagicAttack: 5
-  player: {fileID: 1865036974}
 --- !u!114 &1697022500
 MonoBehaviour:
   m_ObjectHideFlags: 0

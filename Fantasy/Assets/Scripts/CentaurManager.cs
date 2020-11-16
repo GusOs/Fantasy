@@ -46,15 +46,7 @@ public class CentaurManager : MonoBehaviour
 
             anim.SetInteger("moving", 0);
 
-            if (direction.magnitude < 50)
-            {
-                nav = GetComponent<NavMeshAgent>();
-                nav.isStopped = true;
-                anim.SetInteger("moving", 0);
-                anim.SetBool("magic", true);
-            }
-
-            /*if (direction.magnitude < 15)
+            if (direction.magnitude < 15)
             {
                 nav = GetComponent<NavMeshAgent>();
                 nav.isStopped = false;
@@ -62,7 +54,7 @@ public class CentaurManager : MonoBehaviour
                 anim.SetBool("trick", true);
                 anim.SetInteger("moving", 1);
                 nav.SetDestination(player.position);
-            }*/
+            }
 
             if (direction.magnitude < 5)
             {
