@@ -37,7 +37,6 @@ public class ForestEnemyManager : MonoBehaviour
     void Update()
     {
         CheckAnimation();
-        CheckDead();
     }
 
     public void CheckAnimation()
