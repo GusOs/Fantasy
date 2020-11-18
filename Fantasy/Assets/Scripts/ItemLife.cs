@@ -23,9 +23,7 @@ public class ItemLife : MonoBehaviour
 
     /*Comprobar si ha colisionado con el jugador
      * Reproducir audio de vida
-     * añadir 25 de vida al jugador
-     * Instanciar el efecto de vida
-     * Spawner más items
+     * añadir 20 de vida al jugador
      * desactivar el item
     */
     private void OnTriggerEnter(Collider itemCollision)
@@ -33,8 +31,7 @@ public class ItemLife : MonoBehaviour
         if (itemCollision.CompareTag("Player"))
         {
              AudioManager.Instance.PlaySound(life);
-             (itemCollision.gameObject.GetComponent("PlayerMovement") as PlayerMovement).lifePlayer += 20;
-             //Debug.Log((itemCollision.gameObject.GetComponent("PlayerMovement") as PlayerMovement).lifePlayer);
+             (itemCollision.gameObject.GetComponent("PlayerLife") as PlayerLife).currentHealth += 20;
              this.gameObject.SetActive(false);
         }
     }
