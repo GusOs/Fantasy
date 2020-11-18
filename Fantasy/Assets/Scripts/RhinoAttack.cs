@@ -10,8 +10,6 @@ public class RhinoAttack : MonoBehaviour
 
     private Collider hornCollider;
 
-    public RhinoAttack Instance;
-
     // Start is called before the first frame update
     void Start()
     {

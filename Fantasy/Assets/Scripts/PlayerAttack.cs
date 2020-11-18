@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerAttack : MonoBehaviour
 {
     //Daño del ataque
-    public float attackSword = 5.0f;
+    public int attackSword = 5;
 
     public Sound Hit;
 
@@ -36,7 +36,7 @@ public class PlayerAttack : MonoBehaviour
         }
         else if(swordCollider.gameObject.CompareTag("Enemy1"))
         {
-            (swordCollider.gameObject.GetComponent("RhinoManager") as RhinoManager).lifeRhino -= attackSword;
+            (swordCollider.gameObject.GetComponent("RhinoLife") as RhinoLife).currentHealth -= attackSword;
         }
     }
 }

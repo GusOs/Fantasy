@@ -21,6 +21,8 @@ public class RhinoManager : MonoBehaviour
 
     UnityEngine.AI.NavMeshAgent nav;
 
+    public static RhinoManager Instance;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -35,7 +37,6 @@ public class RhinoManager : MonoBehaviour
     void Update()
     {
         CheckAnimation();
-        CheckDead();
     }
 
     public void CheckAnimation()
@@ -68,12 +69,10 @@ public class RhinoManager : MonoBehaviour
 
     public void CheckDead()
     {
-        if (lifeRhino == 0)
-        {
-            anim.SetBool("death", true);
-            nav.isStopped = true;
-            Destroy(this.gameObject);
-            Instantiate(lifeItem, this.transform.position, Quaternion.LookRotation(this.transform.position));
-        }
+        anim.SetBool("death", true);
+        nav = GetComponent<NavMeshAgent>();
+        nav.isStopped = true;
+        Destroy(this.gameObject);
+        Instantiate(lifeItem, this.transform.position, Quaternion.LookRotation(this.transform.position));
     }
 }
