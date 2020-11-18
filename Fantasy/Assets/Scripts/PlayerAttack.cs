@@ -32,7 +32,7 @@ public class PlayerAttack : MonoBehaviour
         }
         else if(swordCollider.gameObject.CompareTag("Enemy"))
         {
-            (swordCollider.gameObject.GetComponent("ForestEnemyManager") as ForestEnemyManager).lifeForest -= attackSword;
+            (swordCollider.gameObject.GetComponent("ForestEnemyLife") as ForestEnemyLife).currentHealth -= attackSword;
         }
         else if(swordCollider.gameObject.CompareTag("Enemy1"))
         {
