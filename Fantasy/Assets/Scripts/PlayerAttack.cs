@@ -27,7 +27,7 @@ public class PlayerAttack : MonoBehaviour
     {
         if (swordCollider.gameObject.CompareTag("Boss"))
         {
-            (swordCollider.gameObject.GetComponent("CentaurManager") as CentaurManager).lifeBoss -= attackSword;
+            (swordCollider.gameObject.GetComponent("CentaurLife") as CentaurLife).currentHealth -= attackSword;
             GameManager.Instance.GameOver();
         }
         else if(swordCollider.gameObject.CompareTag("Enemy"))

@@ -43,12 +43,14 @@ public class RhinoLife : MonoBehaviour
 
     public void CheckDeathRhino()
     {
-        if (currentHealth == 0)
+        float timeDestroy = 1.5f;
+
+        if (currentHealth <= 0)
         {
             anim.SetBool("death", true);
             nav = GetComponent<NavMeshAgent>();
             nav.isStopped = true;
-            Destroy(this.gameObject);
+            Destroy(this.gameObject, timeDestroy);
             Instantiate(lifeItem, this.transform.position, Quaternion.LookRotation(this.transform.position));
         }
     }

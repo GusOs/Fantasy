@@ -1,39 +1,33 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.AI;
 using UnityEngine.UI;
 
-public class ForestEnemyLife : MonoBehaviour
+public class CentaurLife : MonoBehaviour
 {
-    public int maxHealth = 20;
+    public int maxHealth = 35;
     public int currentHealth;
 
     public HealthBar healthBar;
 
     public Slider slider;
 
-    public GameObject lifeItem;
+    public Animator anim;
 
     UnityEngine.AI.NavMeshAgent nav;
-
-    private float timer = 1.5f;
-
-    //Animator del enemigo
-    public Animator anim;
 
     // Start is called before the first frame update
     void Start()
     {
         currentHealth = maxHealth;
         healthBar.SetMaxHealth(maxHealth);
+        anim = GetComponent<Animator>();
     }
 
     // Update is called once per frame
     void Update()
     {
         slider.value = currentHealth;
-        CheckDeathForestCreature();
     }
 
     void TakeDamage(int damage)
@@ -43,16 +37,15 @@ public class ForestEnemyLife : MonoBehaviour
         healthBar.SetHealth(currentHealth);
     }
 
-    public void CheckDeathForestCreature()
+    public void checkDead()
     {
-        float timeDestroy = 1.5f;
+        float timeDestroy = 1.6f;
+
         if (currentHealth <= 0)
         {
             anim.SetBool("death", true);
-            nav = GetComponent<NavMeshAgent>();
-            nav.isStopped = true;
             Destroy(this.gameObject, timeDestroy);
-            Instantiate(lifeItem, this.transform.position, Quaternion.LookRotation(this.transform.position));
+            GameManager.Instance.WinGame();
         }
     }
 }

@@ -125,7 +125,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1054190492}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0.0000082254}
+  m_LocalPosition: {x: 0, y: 0, z: -0.000000059605}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1179055549}
@@ -133,8 +133,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -1.4900055, y: 0}
-  m_SizeDelta: {x: -3.3485413, y: -0.00005722046}
+  m_AnchoredPosition: {x: 4.970001, y: 3.31}
+  m_SizeDelta: {x: 9.931427, y: 6.619957}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1054190496
 CanvasRenderer:
@@ -163,7 +163,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 26f8c775a276da347a1cc9a82ec1ac45, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -349,35 +349,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   slider: {fileID: 1179055550}
-  gradient:
-    serializedVersion: 2
-    key0: {r: 1, g: 0.04995039, b: 0, a: 1}
-    key1: {r: 1, g: 0.9899541, b: 0, a: 1}
-    key2: {r: 0.25652587, g: 1, b: 0, a: 1}
-    key3: {r: 0, g: 0, b: 0, a: 0}
-    key4: {r: 0, g: 0, b: 0, a: 0}
-    key5: {r: 0, g: 0, b: 0, a: 0}
-    key6: {r: 0, g: 0, b: 0, a: 0}
-    key7: {r: 0, g: 0, b: 0, a: 0}
-    ctime0: 15613
-    ctime1: 33346
-    ctime2: 65535
-    ctime3: 0
-    ctime4: 0
-    ctime5: 0
-    ctime6: 0
-    ctime7: 0
-    atime0: 0
-    atime1: 32575
-    atime2: 65535
-    atime3: 0
-    atime4: 0
-    atime5: 0
-    atime6: 0
-    atime7: 0
-    m_Mode: 1
-    m_NumColorKeys: 3
-    m_NumAlphaKeys: 3
   fill: {fileID: 1054190495}
 --- !u!1 &1442654228110344764
 GameObject:
@@ -6146,6 +6117,7 @@ MonoBehaviour:
   healthBar: {fileID: 1179055551}
   anim: {fileID: 1442654229535914406}
   death: {fileID: 11400000, guid: a43f1c545867cba478e47b11826f2c3a, type: 2}
+  slider: {fileID: 1179055550}
 --- !u!1 &1442654229546897916
 GameObject:
   m_ObjectHideFlags: 0

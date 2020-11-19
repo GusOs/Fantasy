@@ -5,7 +5,7 @@ using UnityEngine;
 public class CentaurAttack : MonoBehaviour
 {
     //Daño de ataque
-    public float attackBoss = 5.0f;
+    public int attackBoss = 5;
 
     private Collider weaponCollider;
 
@@ -25,7 +25,7 @@ public class CentaurAttack : MonoBehaviour
     {
         if (weaponCollider.gameObject.CompareTag("Player"))
         {
-            (weaponCollider.gameObject.GetComponent("PlayerMovement") as PlayerMovement).lifePlayer -= attackBoss;
+            (weaponCollider.gameObject.GetComponent("PlayerLife") as PlayerLife).currentHealth -= attackBoss;
         }
     }
 }
