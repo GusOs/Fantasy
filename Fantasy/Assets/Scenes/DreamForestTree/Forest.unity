@@ -3725,6 +3725,8 @@ MonoBehaviour:
   currentHealth: 0
   healthBar: {fileID: 1682071675}
   slider: {fileID: 983653861}
+  lifeItem: {fileID: 500753701376299314, guid: 8ff845677d9663f47adf91d33c7dc4a5, type: 3}
+  anim: {fileID: 1062515787816115368}
 --- !u!114 &1062515787816115366
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4277,3 +4279,5 @@ MonoBehaviour:
   currentHealth: 0
   healthBar: {fileID: 1682071675}
   slider: {fileID: 56495508}
+  anim: {fileID: 9021066422289914164}
+  lifeItem: {fileID: 500753701376299314, guid: 8ff845677d9663f47adf91d33c7dc4a5, type: 3}

@@ -21,8 +21,6 @@ public class ForestEnemyManager : MonoBehaviour
 
     UnityEngine.AI.NavMeshAgent nav;
 
-    public static ForestEnemyManager Instance;
-
     // Start is called before the first frame update
     void Start()
     {
@@ -64,13 +62,5 @@ public class ForestEnemyManager : MonoBehaviour
                 anim.SetBool("attack", true);
             }
         }
-    }
-
-    public void CheckDead()
-    {
-        anim.SetBool("death", true);
-        nav.isStopped = true;
-        Destroy(this.gameObject);
-        Instantiate(lifeItem, this.transform.position, Quaternion.LookRotation(this.transform.position));
     }
 }

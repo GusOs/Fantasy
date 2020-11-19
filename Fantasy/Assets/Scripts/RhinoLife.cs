@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 using UnityEngine.UI;
 
 public class RhinoLife : MonoBehaviour
@@ -12,11 +13,18 @@ public class RhinoLife : MonoBehaviour
 
     public Slider slider;
 
+    public Animator anim;
+
+    public GameObject lifeItem;
+
+    UnityEngine.AI.NavMeshAgent nav;
+
     // Start is called before the first frame update
     void Start()
     {
         currentHealth = maxHealth;
         healthBar.SetMaxHealth(maxHealth);
+        anim = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -37,7 +45,11 @@ public class RhinoLife : MonoBehaviour
     {
         if (currentHealth == 0)
         {
-            RhinoManager.Instance.CheckDead();
+            anim.SetBool("death", true);
+            nav = GetComponent<NavMeshAgent>();
+            nav.isStopped = true;
+            Destroy(this.gameObject);
+            Instantiate(lifeItem, this.transform.position, Quaternion.LookRotation(this.transform.position));
         }
     }
 }

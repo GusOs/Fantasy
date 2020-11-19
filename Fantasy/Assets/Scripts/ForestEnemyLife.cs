@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 using UnityEngine.UI;
 
 public class ForestEnemyLife : MonoBehaviour
@@ -11,6 +12,13 @@ public class ForestEnemyLife : MonoBehaviour
     public HealthBar healthBar;
 
     public Slider slider;
+
+    public GameObject lifeItem;
+
+    UnityEngine.AI.NavMeshAgent nav;
+
+    //Animator del enemigo
+    public Animator anim;
 
     // Start is called before the first frame update
     void Start()
@@ -37,7 +45,11 @@ public class ForestEnemyLife : MonoBehaviour
     {
         if (currentHealth == 0)
         {
-            ForestEnemyManager.Instance.CheckDead();
+            anim.SetBool("death", true);
+            nav = GetComponent<NavMeshAgent>();
+            nav.isStopped = true;
+            Destroy(this.gameObject);
+            Instantiate(lifeItem, this.transform.position, Quaternion.LookRotation(this.transform.position));
         }
     }
 }
