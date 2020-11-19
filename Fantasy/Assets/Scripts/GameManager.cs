@@ -64,5 +64,6 @@ public class GameManager : MonoBehaviour
     {
         yield return new WaitForSeconds(1.5f);
         panelWinGame.SetActive(true);
+        Time.timeScale = 0;
     }
 }
