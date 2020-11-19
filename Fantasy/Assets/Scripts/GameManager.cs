@@ -12,10 +12,10 @@ public class GameManager : MonoBehaviour
     private PlayerLife playerScript;
 
     // Referencia al script del jefe final
-    private CentaurManager centaurScript;
+    private CentaurLife centaurScript;
 
     //Referencia al objeto de la vida del centauro
-    public GameObject lifeBoss;
+    public GameObject currentHealthCentaur;
 
     //Referencia al objeto de la vida del jugador
     public GameObject currentHealth;
@@ -37,6 +37,7 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         playerScript = currentHealth.GetComponent<PlayerLife>();
+        centaurScript = currentHealth.GetComponent<CentaurLife>();
         Time.timeScale = 1;
     }
 
@@ -51,9 +52,12 @@ public class GameManager : MonoBehaviour
 
     public void WinGame()
     {
-        isGameActive = false;
-        StartCoroutine(ShowGameWinPanelCoroutine());
-        Cursor.lockState = CursorLockMode.Confined;
+        if(isGameActive)
+        {
+            isGameActive = false;
+            StartCoroutine(ShowGameWinPanelCoroutine());
+            Cursor.lockState = CursorLockMode.Confined;
+        }
     }
 
     public IEnumerator ShowGameWinPanelCoroutine()

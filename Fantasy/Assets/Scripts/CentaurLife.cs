@@ -28,6 +28,7 @@ public class CentaurLife : MonoBehaviour
     void Update()
     {
         slider.value = currentHealth;
+        checkDead();
     }
 
     void TakeDamage(int damage)
@@ -44,8 +45,8 @@ public class CentaurLife : MonoBehaviour
         if (currentHealth <= 0)
         {
             anim.SetBool("death", true);
-            Destroy(this.gameObject, timeDestroy);
             GameManager.Instance.WinGame();
+            Destroy(this.gameObject, timeDestroy);
         }
     }
 }
