@@ -1691,8 +1691,6 @@ GameObject:
   - component: {fileID: 9021066423261708046}
   - component: {fileID: 9021066423261708044}
   - component: {fileID: 9021066422289914169}
-  - component: {fileID: 9021066422289914165}
-  - component: {fileID: 9021066422289914166}
   - component: {fileID: 9021066422289914167}
   - component: {fileID: 9021066422289914168}
   - component: {fileID: 9021066422289914170}
@@ -1795,35 +1793,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &9021066422289914165
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9021066423261588178}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e5fc71b1d8e4ec34780bc6f9c96ae862, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  audioSource: {fileID: 0}
-  anim: {fileID: 9021066423252190852}
-  stepDelay: 1.2
-  defaultClip: {fileID: 8300000, guid: 8cc749ec5b5de61438f1c7aef0d79e90, type: 3}
---- !u!114 &9021066422289914166
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9021066423261588178}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6d264bdbe1d63ed409a251e2b2601187, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  attackRhino: 2
 --- !u!114 &9021066422289914167
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2288,6 +2257,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackRhino: 2
+  hitHorn: {fileID: 11400000, guid: b9a0ec1f8f83699478bd27f681560177, type: 2}
 --- !u!1 &9021066423261610074
 GameObject:
   m_ObjectHideFlags: 0
