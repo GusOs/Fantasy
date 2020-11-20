@@ -13433,22 +13433,6 @@ MonoBehaviour:
   anim: {fileID: 1697022487}
   stepDelay: 0.4
   defaultClip: {fileID: 8300000, guid: 04c5a09929ea74a4cbce45e5e1dc6683, type: 3}
---- !u!114 &1697022489
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1697022485}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 527304f61e35c654ca1ef1188571d268, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  audioSource: {fileID: 2100131552}
-  anim: {fileID: 1697022487}
-  stepDelay: 1.8
-  defaultClip: {fileID: 8300000, guid: 7c581198488ad9c4d833c4d2eafb78af, type: 3}
 --- !u!114 &1697022490
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13514,6 +13498,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackBoss: 5
+  centaurHit: {fileID: 11400000, guid: 788ec69360486554f8d666926243945d, type: 2}
 --- !u!1001 &1710495242
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16656,12 +16641,6 @@ PrefabInstance:
 --- !u!4 &2100131551 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7116603329727596829, guid: f38b196043eb0c145b07fbbaca5410f2,
-    type: 3}
-  m_PrefabInstance: {fileID: 2100131550}
-  m_PrefabAsset: {fileID: 0}
---- !u!82 &2100131552 stripped
-AudioSource:
-  m_CorrespondingSourceObject: {fileID: 7116603329727596802, guid: f38b196043eb0c145b07fbbaca5410f2,
     type: 3}
   m_PrefabInstance: {fileID: 2100131550}
   m_PrefabAsset: {fileID: 0}

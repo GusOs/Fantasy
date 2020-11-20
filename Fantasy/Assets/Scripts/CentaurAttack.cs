@@ -9,6 +9,8 @@ public class CentaurAttack : MonoBehaviour
 
     private Collider weaponCollider;
 
+    public Sound centaurHit;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -26,6 +28,7 @@ public class CentaurAttack : MonoBehaviour
         if (weaponCollider.gameObject.CompareTag("Player"))
         {
             (weaponCollider.gameObject.GetComponent("PlayerLife") as PlayerLife).currentHealth -= attackBoss;
+            AudioManager.Instance.PlaySound(centaurHit);
         }
     }
 }
