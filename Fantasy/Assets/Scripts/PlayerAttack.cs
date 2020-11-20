@@ -28,15 +28,17 @@ public class PlayerAttack : MonoBehaviour
         if (swordCollider.gameObject.CompareTag("Boss"))
         {
             (swordCollider.gameObject.GetComponent("CentaurLife") as CentaurLife).currentHealth -= attackSword;
-            GameManager.Instance.GameOver();
+            AudioManager.Instance.PlaySound(Hit);
         }
         else if(swordCollider.gameObject.CompareTag("Enemy"))
         {
             (swordCollider.gameObject.GetComponent("ForestEnemyLife") as ForestEnemyLife).currentHealth -= attackSword;
+            AudioManager.Instance.PlaySound(Hit);
         }
         else if(swordCollider.gameObject.CompareTag("Enemy1"))
         {
             (swordCollider.gameObject.GetComponent("RhinoLife") as RhinoLife).currentHealth -= attackSword;
+            AudioManager.Instance.PlaySound(Hit);
         }
     }
 }

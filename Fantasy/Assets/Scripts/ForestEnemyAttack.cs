@@ -10,6 +10,8 @@ public class ForestEnemyAttack : MonoBehaviour
 
     private Collider legsCollider;
 
+    public Sound hitForestCreature;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -27,7 +29,7 @@ public class ForestEnemyAttack : MonoBehaviour
         if (legsCollider.gameObject.CompareTag("Player"))
         {
             (legsCollider.gameObject.GetComponent("PlayerLife") as PlayerLife).currentHealth -= attackForest;
-            GameManager.Instance.GameOver();
+            AudioManager.Instance.PlaySound(hitForestCreature);
         }
     }
 }

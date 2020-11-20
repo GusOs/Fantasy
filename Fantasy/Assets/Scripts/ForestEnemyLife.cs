@@ -17,8 +17,6 @@ public class ForestEnemyLife : MonoBehaviour
 
     UnityEngine.AI.NavMeshAgent nav;
 
-    private float timer = 1.5f;
-
     //Animator del enemigo
     public Animator anim;
 
@@ -27,6 +25,7 @@ public class ForestEnemyLife : MonoBehaviour
     {
         currentHealth = maxHealth;
         healthBar.SetMaxHealth(maxHealth);
+        anim = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -45,13 +44,12 @@ public class ForestEnemyLife : MonoBehaviour
 
     public void CheckDeathForestCreature()
     {
-        float timeDestroy = 1.5f;
         if (currentHealth <= 0)
         {
             anim.SetBool("death", true);
             nav = GetComponent<NavMeshAgent>();
             nav.isStopped = true;
-            Destroy(this.gameObject, timeDestroy);
+            Destroy(gameObject);
             Instantiate(lifeItem, this.transform.position, Quaternion.LookRotation(this.transform.position));
         }
     }

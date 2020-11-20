@@ -10,6 +10,8 @@ public class ForestCreatureHitSound : MonoBehaviour
     public AudioClip defaultClip;
     private bool couroutineOn;
 
+    private Collider legsCollider;
+
     void Start()
     {
 
@@ -27,7 +29,7 @@ public class ForestCreatureHitSound : MonoBehaviour
         while (couroutineOn == true)
         {
 
-            if (anim.GetCurrentAnimatorStateInfo(0).IsName("Attack2"))
+            if (anim.GetCurrentAnimatorStateInfo(0).IsName("Attack2") && legsCollider.gameObject.CompareTag("Player"))
             {
                 audioSource.Play();
             }

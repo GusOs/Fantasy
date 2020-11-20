@@ -10,6 +10,8 @@ public class RhinoAttack : MonoBehaviour
 
     private Collider hornCollider;
 
+    public Sound hitHorn;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -27,7 +29,7 @@ public class RhinoAttack : MonoBehaviour
         if (hornCollider.gameObject.CompareTag("Player"))
         {
             (hornCollider.gameObject.GetComponent("PlayerLife") as PlayerLife).currentHealth -= attackRhino;
-            GameManager.Instance.GameOver();
+            AudioManager.Instance.PlaySound(hitHorn);
         }
     }
 }
