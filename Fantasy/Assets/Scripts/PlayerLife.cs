@@ -12,8 +12,6 @@ public class PlayerLife : MonoBehaviour
 
     public Animator anim;
 
-    public Sound death;
-
     public Slider slider;
 
     // Start is called before the first frame update
@@ -27,6 +25,7 @@ public class PlayerLife : MonoBehaviour
     void Update()
     {
         slider.value = currentHealth;
+        CheckDead();
     }
 
     void TakeDamage(int damage)
@@ -38,10 +37,12 @@ public class PlayerLife : MonoBehaviour
 
     public void CheckDead()
     {
-        if (currentHealth == 0)
+        if (currentHealth <= 0)
         {
             anim.SetBool("death", true);
-            AudioManager.Instance.PlaySound(death);
+        }
+        if(anim.GetCurrentAnimatorStateInfo(0).IsName("Death"))
+        {
             GameManager.Instance.GameOver();
         }
     }
