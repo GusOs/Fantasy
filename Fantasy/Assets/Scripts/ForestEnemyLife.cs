@@ -49,8 +49,11 @@ public class ForestEnemyLife : MonoBehaviour
             anim.SetBool("death", true);
             nav = GetComponent<NavMeshAgent>();
             nav.isStopped = true;
-            Destroy(gameObject);
+        }
+        if(anim.GetCurrentAnimatorStateInfo(0).IsName("Death"))
+        {
             Instantiate(lifeItem, this.transform.position, Quaternion.LookRotation(this.transform.position));
+            Destroy(gameObject);
         }
     }
 }
