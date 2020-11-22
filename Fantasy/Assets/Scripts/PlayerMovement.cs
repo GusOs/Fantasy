@@ -15,7 +15,6 @@ public class PlayerMovement : MonoBehaviour
 	private float w_sp = 0.0f;
 	private float r_sp = 0.0f;
 	private bool armed = true;
-	public float lifePlayer = 100f;
 
 	public Sound arm;
 
@@ -93,14 +92,6 @@ public class PlayerMovement : MonoBehaviour
 		else
         {
 			anim.SetInteger("attack", 0);
-        }
-
-
-		//-------------------------------------------------------------------DEATH
-
-		if(lifePlayer == 0)
-        {
-			anim.SetBool("death", true);
         }
 
 

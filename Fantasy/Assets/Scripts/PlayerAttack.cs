@@ -11,6 +11,8 @@ public class PlayerAttack : MonoBehaviour
 
     private Collider swordCollider;
 
+    public Animator anim;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -25,17 +27,17 @@ public class PlayerAttack : MonoBehaviour
 
     private void OnTriggerEnter(Collider swordCollider)
     {
-        if (swordCollider.gameObject.CompareTag("Boss"))
+        if (swordCollider.gameObject.CompareTag("Boss") && anim.GetCurrentAnimatorStateInfo(0).IsName("Attack3"))
         {
             (swordCollider.gameObject.GetComponent("CentaurLife") as CentaurLife).currentHealth -= attackSword;
             AudioManager.Instance.PlaySound(Hit);
         }
-        else if(swordCollider.gameObject.CompareTag("Enemy"))
+        else if(swordCollider.gameObject.CompareTag("Enemy") && anim.GetCurrentAnimatorStateInfo(0).IsName("Attack3"))
         {
             (swordCollider.gameObject.GetComponent("ForestEnemyLife") as ForestEnemyLife).currentHealth -= attackSword;
             AudioManager.Instance.PlaySound(Hit);
         }
-        else if(swordCollider.gameObject.CompareTag("Enemy1"))
+        else if(swordCollider.gameObject.CompareTag("Enemy1") && anim.GetCurrentAnimatorStateInfo(0).IsName("Attack3"))
         {
             (swordCollider.gameObject.GetComponent("RhinoLife") as RhinoLife).currentHealth -= attackSword;
             AudioManager.Instance.PlaySound(Hit);

@@ -26,6 +26,8 @@ public class GameManager : MonoBehaviour
     //Objeto del panel wingame
     public GameObject panelWinGame;
 
+    public Sound playerDeath;
+
 
     private void Awake()
     {
@@ -46,8 +48,15 @@ public class GameManager : MonoBehaviour
         if(playerScript.currentHealth <= 0 && isGameActive)
         {
             isGameActive = false;
-            SceneManager.LoadScene("Forest");
+            AudioManager.Instance.PlaySound(playerDeath);
+            StartCoroutine(LoadScene());
         }
+    }
+
+    public IEnumerator LoadScene()
+    {
+        yield return new WaitForSeconds(0.7f);
+        SceneManager.LoadScene("Forest");
     }
 
     public void WinGame()

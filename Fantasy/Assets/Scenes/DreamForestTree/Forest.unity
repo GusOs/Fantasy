@@ -1464,6 +1464,10 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1619502665, guid: 6fb81720ab4f4bf49b955a963167f251, type: 3}
+      propertyPath: anim
+      value: 
+      objectReference: {fileID: 1027355809}
     - target: {fileID: 1442654229535914411, guid: 6fb81720ab4f4bf49b955a963167f251,
         type: 3}
       propertyPath: m_Name
@@ -2812,6 +2816,12 @@ PrefabInstance:
       propertyPath: lifeBoss
       value: 
       objectReference: {fileID: 1027355796}
+    - target: {fileID: 4875571986208150704, guid: 614746ec53d38e846972603cf57f7684,
+        type: 3}
+      propertyPath: playerDeath
+      value: 
+      objectReference: {fileID: 11400000, guid: a43f1c545867cba478e47b11826f2c3a,
+        type: 2}
     - target: {fileID: 4875571986208150705, guid: 614746ec53d38e846972603cf57f7684,
         type: 3}
       propertyPath: m_LocalPosition.x
