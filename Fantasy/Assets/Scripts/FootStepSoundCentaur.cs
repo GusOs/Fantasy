@@ -4,10 +4,19 @@ using UnityEngine;
 
 public class FootStepSoundCentaur : MonoBehaviour
 {
+    //Variable del AudioSource
     public AudioSource audioSource;
+
+    //Variable del animator
     public Animator anim;
+
+    //Variable de delay
     public float stepDelay;
+
+    //Variable del Audioclip
     public AudioClip defaultClip;
+
+    //Variable para controlar la corrutina
     private bool couroutineOn;
 
     void Start()
@@ -21,6 +30,7 @@ public class FootStepSoundCentaur : MonoBehaviour
         StartCoroutine(Walking());
     }
 
+    //Si la corrutina está activada, reproduce el sonido si la animación que se reproduce es la indicada
     IEnumerator Walking()
     {
 

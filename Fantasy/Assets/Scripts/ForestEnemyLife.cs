@@ -6,13 +6,19 @@ using UnityEngine.UI;
 
 public class ForestEnemyLife : MonoBehaviour
 {
+    // Vida del enemigo
     public int maxHealth = 20;
+
+    //Vida actual
     public int currentHealth;
 
+    // Referencia a la barra de vida
     public HealthBar healthBar;
 
+    // Referencia al slider
     public Slider slider;
 
+    // Referencia al item de vida
     public GameObject lifeItem;
 
     UnityEngine.AI.NavMeshAgent nav;
@@ -42,6 +48,11 @@ public class ForestEnemyLife : MonoBehaviour
         healthBar.SetHealth(currentHealth);
     }
 
+    /*
+     * Si la vida es igual o menor a 0
+     * reproduce animación de muerte y para el nav
+     * Si se reproduce la animación de muerte, instancia el item de vida y destruye el objeto del enemigo
+    */
     public void CheckDeathForestCreature()
     {
         if (currentHealth <= 0)

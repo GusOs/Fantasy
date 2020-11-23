@@ -4,10 +4,19 @@ using UnityEngine;
 
 public class ForestEnemySoundsDeath : MonoBehaviour
 {
+    //Variable del AudioSource
     public AudioSource audioSource;
+
+    //Variable del animator
     public Animator anim;
+
+    //Variable de delay
     public float stepDelay;
+
+    //Variable del Audioclip
     public AudioClip defaultClip;
+
+    //Variable para controlar la corrutina
     private bool couroutineOn;
 
     void Start()
@@ -21,6 +30,7 @@ public class ForestEnemySoundsDeath : MonoBehaviour
         StartCoroutine(Death());
     }
 
+    // Si las garras, colisionan con el jugador, le resta vida y reproduce el sonido de muerte
     IEnumerator Death()
     {
 

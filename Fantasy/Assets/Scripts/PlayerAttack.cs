@@ -7,10 +7,13 @@ public class PlayerAttack : MonoBehaviour
     //Daño del ataque
     public int attackSword = 5;
 
+    // Sonido al atacar
     public Sound Hit;
 
+    // Colisión del arma
     private Collider swordCollider;
 
+    // Animator del jugador
     public Animator anim;
 
     // Start is called before the first frame update
@@ -19,12 +22,7 @@ public class PlayerAttack : MonoBehaviour
         swordCollider = GetComponent<Collider>();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-
+    // Si está atacando y el arma colisiona con algún enemigo
     private void OnTriggerEnter(Collider swordCollider)
     {
         if (swordCollider.gameObject.CompareTag("Boss") && anim.GetCurrentAnimatorStateInfo(0).IsName("Attack3"))

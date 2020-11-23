@@ -5,14 +5,16 @@ using UnityEngine.SceneManagement;
 
 public class MirrorManager : MonoBehaviour
 {
-
+    // Sonido al entrar el jugador
     public Sound mirror;
 
+    // Colisión del jugador
     private Collider playerCollision;
 
+    // Referencia al jugador
     public GameObject player;
 
-
+    // Si el jugador colisiona, reproduce un audio y carga la escena indicada
     private void OnTriggerEnter(Collider playerCollision)
     {
         if(playerCollision.CompareTag("Player"))

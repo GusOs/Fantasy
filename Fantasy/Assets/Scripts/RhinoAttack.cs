@@ -8,8 +8,10 @@ public class RhinoAttack : MonoBehaviour
     //Daño del ataque
     public int attackRhino = 2;
 
+    // Colisión del cuero
     private Collider hornCollider;
 
+    // Audio del ataque
     public Sound hitHorn;
 
     // Start is called before the first frame update
@@ -18,12 +20,7 @@ public class RhinoAttack : MonoBehaviour
         hornCollider = GetComponent<Collider>();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-
+    // Si el cuerno colisiona con el jugador, le resta vida y reproduce el sonido del cuerno
     private void OnTriggerEnter(Collider hornCollider)
     {
         if (hornCollider.gameObject.CompareTag("Player"))

@@ -26,6 +26,7 @@ public class GameManager : MonoBehaviour
     //Objeto del panel wingame
     public GameObject panelWinGame;
 
+    // Sonido de muerte del jugador
     public Sound playerDeath;
 
 
@@ -43,6 +44,11 @@ public class GameManager : MonoBehaviour
         Time.timeScale = 1;
     }
 
+    /*
+     * Si la vida del jugador es igual o menor o 0
+     * reproduce sonido
+     * inicia la corrutina de cargar escena
+     */
     public void GameOver()
     {
         if(playerScript.currentHealth <= 0 && isGameActive)
@@ -53,12 +59,18 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    // Cargar la escena indicada
     public IEnumerator LoadScene()
     {
         yield return new WaitForSeconds(0.7f);
         SceneManager.LoadScene("Forest");
     }
 
+    /*
+     * Se llama cuando la vida del centauro es menor o igual a 0
+     *  Activa la corrutina del panel de victoria
+     *  muestra el cursor
+     */
     public void WinGame()
     {
         if(isGameActive)
@@ -69,6 +81,7 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    // Muestra el panel de victoria y congela el juego
     public IEnumerator ShowGameWinPanelCoroutine()
     {
         yield return new WaitForSeconds(1.5f);

@@ -18,12 +18,7 @@ public class ForestEnemyAttack : MonoBehaviour
         legsCollider = GetComponent<Collider>();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
+    // Si las garras, colisionan con el jugador, le resta vida y reproduce el sonido del ataque
     private void OnTriggerEnter(Collider legsCollider)
     {
         if (legsCollider.gameObject.CompareTag("Player"))

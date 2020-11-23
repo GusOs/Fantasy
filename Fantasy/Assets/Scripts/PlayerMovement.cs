@@ -4,21 +4,41 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-
+	// Variable del animator
 	private Animator anim;
+
+	//variable del charactercontroller
 	private CharacterController controller;
+
+	//Variable de velocidad
 	public float speed = 6.0f;
+
+	// Variable velocidad movimientos
 	public float runSpeed = 3.0f;
+
+	//Variable de velocidad al girar
 	public float turnSpeed = 60.0f;
+
+	//Variable de gravedad
 	public float gravity = 20.0f;
+
+	//Variable de dirección
 	private Vector3 moveDirection = Vector3.zero;
+
+	//Variable que hace referencia a la velocidad
 	private float w_sp = 0.0f;
+
+	//Variable que hace referencia a la velocidad de movimientos
 	private float r_sp = 0.0f;
+
+	// Variable si está armado
 	private bool armed = true;
 
-	public Sound arm;
+	//Audio envainar arma
+	public Sound unsheathe;
 
-	public Sound disarm;
+	//Audio desenvainar arma
+	public Sound sheathe;
 
 	// Start is called before the first frame update
 	void Start()
@@ -71,12 +91,12 @@ public class PlayerMovement : MonoBehaviour
 			if (armed)
 			{
 				anim.SetBool("armed", true);
-				AudioManager.Instance.PlaySound(arm);
+				AudioManager.Instance.PlaySound(unsheathe);
 			}
 			if (!armed)
 			{
 				anim.SetBool("armed", false);
-				AudioManager.Instance.PlaySound(disarm);
+				AudioManager.Instance.PlaySound(sheathe);
 				runSpeed = 1;
 			}
 			armed = !armed;

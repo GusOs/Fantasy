@@ -55,7 +55,7 @@ public class RhinoManager : MonoBehaviour
                 nav.SetDestination(player.position);
             }
 
-            if (direction.magnitude < 4.5f)
+            if (direction.magnitude < 5f)
             {
                 anim.SetInteger("moving", 0);
                 nav = GetComponent<NavMeshAgent>();

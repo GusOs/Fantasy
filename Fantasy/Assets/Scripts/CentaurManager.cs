@@ -14,12 +14,6 @@ public class CentaurManager : MonoBehaviour
     //Animator del enemigo
     public Animator anim;
 
-    public float lifeBoss = 35;
-
-    public float attackCentaur = 8.0f;
-
-
-
     UnityEngine.AI.NavMeshAgent nav;
 
     // Start is called before the first frame update
@@ -32,8 +26,8 @@ public class CentaurManager : MonoBehaviour
     void Update()
     {
         checkAnimation();
-        checkDead();
     }
+
 
     public void checkAnimation()
     {
@@ -63,18 +57,6 @@ public class CentaurManager : MonoBehaviour
                 anim.SetInteger("moving", 0);            
                 anim.SetBool("attack", true);
             }
-        }
-    }
-
-    public void checkDead()
-    {
-        float timeDestroy = 1.6f;
-
-        if (lifeBoss <= 0)
-        {
-            anim.SetBool("death", true);
-            GameManager.Instance.WinGame();
-            Destroy(this.gameObject, timeDestroy);
         }
     }
 }

@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class WaterManager : MonoBehaviour
 {
-
+    // Colisión del agua
     private Collider waterCollider;
 
     // Start is called before the first frame update
@@ -14,7 +14,7 @@ public class WaterManager : MonoBehaviour
         waterCollider = GetComponent<Collider>();
     }
 
-
+    // Si el jugador colisiona con el agua, carga la escena actual
     private void OnTriggerEnter(Collider waterCollider)
     {
         if (waterCollider.gameObject.CompareTag("Player"))
