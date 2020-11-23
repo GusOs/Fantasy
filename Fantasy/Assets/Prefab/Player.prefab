@@ -1488,6 +1488,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackSword: 5
   Hit: {fileID: 11400000, guid: 4a105e9baa62e1e4e9a73ffb628fe7a3, type: 2}
+  anim: {fileID: 1442654229535914406}
 --- !u!1 &1442654228414409744
 GameObject:
   m_ObjectHideFlags: 0
@@ -5970,6 +5971,7 @@ GameObject:
   - component: {fileID: 1442654229535914410}
   - component: {fileID: 1027355796}
   - component: {fileID: 1027355797}
+  - component: {fileID: 1027355795}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -6068,7 +6070,6 @@ MonoBehaviour:
   runSpeed: 6
   turnSpeed: 60
   gravity: 20
-  lifePlayer: 100
   arm: {fileID: 11400000, guid: a6d16a52428c32c43b707272c2e839b1, type: 2}
   disarm: {fileID: 11400000, guid: 69192820921668f42898fc7f6c2aa478, type: 2}
 --- !u!65 &1442654229535914410
@@ -6116,8 +6117,23 @@ MonoBehaviour:
   currentHealth: 0
   healthBar: {fileID: 1179055551}
   anim: {fileID: 1442654229535914406}
-  death: {fileID: 11400000, guid: a43f1c545867cba478e47b11826f2c3a, type: 2}
   slider: {fileID: 1179055550}
+--- !u!114 &1027355795
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1442654229535914411}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c99b833907a94644590192fd58d37979, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioSource: {fileID: 0}
+  anim: {fileID: 1442654229535914406}
+  stepDelay: 0
+  defaultClip: {fileID: 8300000, guid: d42453581d3b5af46882e7441c9b1c45, type: 3}
 --- !u!1 &1442654229546897916
 GameObject:
   m_ObjectHideFlags: 0

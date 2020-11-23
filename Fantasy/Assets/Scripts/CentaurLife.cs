@@ -45,8 +45,11 @@ public class CentaurLife : MonoBehaviour
         if (currentHealth <= 0)
         {
             anim.SetBool("death", true);
-            GameManager.Instance.WinGame();
             Destroy(this.gameObject, timeDestroy);
+        }
+        if (anim.GetCurrentAnimatorStateInfo(0).IsName("death"))
+        {
+            GameManager.Instance.WinGame();
         }
     }
 }
