@@ -46,9 +46,6 @@ public class ForestEnemyManager : MonoBehaviour
 
             this.transform.rotation = Quaternion.Slerp(this.transform.rotation, Quaternion.LookRotation(direction), 0.1f);
 
-            nav = GetComponent<NavMeshAgent>();
-            nav.isStopped = true;
-
             if (direction.magnitude < 20)
             {
                 anim.SetBool("attack", false);           

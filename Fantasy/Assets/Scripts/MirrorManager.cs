@@ -14,10 +14,6 @@ public class MirrorManager : MonoBehaviour
     // Referencia al jugador
     public GameObject player;
 
-    private void Start()
-    {
-        player = GameObject.Find("Player");
-    }
 
     // Si el jugador colisiona, reproduce un audio y carga la escena indicada
     private void OnTriggerEnter(Collider playerCollision)
