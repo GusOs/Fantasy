@@ -26,7 +26,7 @@ public class CentaurLife : MonoBehaviour
         anim = GetComponent<Animator>();
     }
 
-    // Igualar el slider a la vida actual y comprobar si ha muerto
+    // Update is called once per frame
     void Update()
     {
         slider.value = currentHealth;
