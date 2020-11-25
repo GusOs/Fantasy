@@ -11,9 +11,6 @@ public class PlayerLife : MonoBehaviour
     // Vida actual
     public int currentHealth;
 
-    // Referencia a la barra de vida
-    public HealthBar healthBar;
-
     // Referencia al Animator del jugador
     public Animator anim;
 
@@ -24,7 +21,6 @@ public class PlayerLife : MonoBehaviour
     void Start()
     {
         currentHealth = maxHealth;
-        healthBar.SetMaxHealth(maxHealth);
     }
 
     // Update is called once per frame
@@ -32,13 +28,6 @@ public class PlayerLife : MonoBehaviour
     {
         slider.value = currentHealth;
         CheckDead();
-    }
-
-    void TakeDamage(int damage)
-    {
-        currentHealth -= damage;
-
-        healthBar.SetHealth(currentHealth);
     }
 
     /*

@@ -5769,7 +5769,7 @@ RectTransform:
   m_GameObject: {fileID: 762133459}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.3, y: 0.09, z: 0.5}
+  m_LocalScale: {x: 1.13, y: 0.09, z: 0.5}
   m_Children:
   - {fileID: 1344550087}
   - {fileID: 773936655}
@@ -13642,7 +13642,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 35
   currentHealth: 0
-  healthBar: {fileID: 0}
   slider: {fileID: 762133461}
   anim: {fileID: 1697022487}
 --- !u!114 &1697022500

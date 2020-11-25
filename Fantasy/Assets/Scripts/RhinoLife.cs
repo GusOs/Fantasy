@@ -12,9 +12,6 @@ public class RhinoLife : MonoBehaviour
     // Vida actual
     public int currentHealth;
 
-    // Referencia a la barra de vida
-    public HealthBar healthBar;
-
     // Referencia al slider
     public Slider slider;
 
@@ -30,7 +27,6 @@ public class RhinoLife : MonoBehaviour
     void Start()
     {
         currentHealth = maxHealth;
-        healthBar.SetMaxHealth(maxHealth);
         anim = GetComponent<Animator>();
     }
 
@@ -39,13 +35,6 @@ public class RhinoLife : MonoBehaviour
     {
         slider.value = currentHealth;
         CheckDeathRhino();
-    }
-
-    void TakeDamage(int damage)
-    {
-        currentHealth -= damage;
-
-        healthBar.SetHealth(currentHealth);
     }
 
     /*

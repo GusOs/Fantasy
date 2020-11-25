@@ -11,9 +11,6 @@ public class CentaurLife : MonoBehaviour
     //Vida actual
     public int currentHealth;
 
-    //Referencia a la barra de vida
-    public HealthBar healthBar;
-
     //Referencia al slider
     public Slider slider;
 
@@ -26,7 +23,6 @@ public class CentaurLife : MonoBehaviour
     void Start()
     {
         currentHealth = maxHealth;
-        healthBar.SetMaxHealth(maxHealth);
         anim = GetComponent<Animator>();
     }
 
@@ -35,13 +31,6 @@ public class CentaurLife : MonoBehaviour
     {
         slider.value = currentHealth;
         checkDead();
-    }
-
-    void TakeDamage(int damage)
-    {
-        currentHealth -= damage;
-
-        healthBar.SetHealth(currentHealth);
     }
 
     /*
